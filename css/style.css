@@ -64,7 +64,7 @@ body {
 @media (max-width: 768px) {
     .article_title {
         font-size: 9vw; /* 모바일에서는 글자 크기를 조금 더 키움 */
-        right: 87%; /* 모바일 화면에 맞게 위치 조정 */
+        right: 80%; /* 모바일 화면에 맞게 위치 조정 */
         bottom: 2%;
         /* writing-mode: horizontal-tb; 모바일에서는 수평 쓰기 모드 */
     }
@@ -73,7 +73,7 @@ body {
 @media (max-width: 480px) {
     .article_title {
         font-size: 9vw; /* 작은 화면에서는 더 큰 글자 크기 */
-        right: 87%; /* 위치를 더 세밀하게 조정 */
+        right: 80%; /* 위치를 더 세밀하게 조정 */
         bottom: 2%;
         /* writing-mode: horizontal-tb; 모바일에서는 수평 쓰기 모드 */
     }

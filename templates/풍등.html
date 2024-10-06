@@ -9,12 +9,29 @@
 </head>
 <body>
     <p style="text-align: center;">
-    풍등
-</p>
-<hr>
-&nbsp;소망 같은 것들 바람 같은 것들
-<br>&nbsp;어딘가로 사라지겠지만 그리 멀리 떨어지네 :)
-<hr>
-<!-- <a href="https://upload.wikimedia.org/wikipedia/commons/9/94/SkyLanternRichy01.jpg">풍등</a> -->
+        <a href="#" onclick="showPopup()">풍등</a>
+    </p>
+    <hr>
+    <iframe src="https://www.youtube.com/embed/miq7YtCBqow?si=B626yXqqkavrw7fN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen width="100%" height="autoplay"></iframe>
+    <hr>
+    &nbsp;소망 같은 것들 바람 같은 것들
+    <br>&nbsp;어딘가로 사라지겠지만 그리 멀리 떨어지네 
+    <hr>
+    &nbsp;앞으로 우리에게 몇 번의 여름이 더 :)
+    <hr>
+    
+    <!-- 팝업 오버레이 -->
+    <div class="popup-overlay" onclick="hidePopup()"></div>
+
+    <!-- 팝업 내용 -->
+    <div class="popup" id="popup">
+        <p>풍등: 바람에 의해 공중으로 떠오르는 소형 열기구. 축제나 기원 의식에서 자주 사용됩니다.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/94/SkyLanternRichy01.jpg" alt="">
+    </div>
+
+    <script src="../js/popup.js"></script>
+
+    
+
 </body>
 </html>

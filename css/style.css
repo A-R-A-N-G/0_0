@@ -4,8 +4,9 @@ body {
     max-width: 650px;
     line-height: 1.6;
     font-size: 18px;
-    color: #444;
+    color: #ffffff;
     padding: 0 10px;
+    background-color: #000000;
     
 }
 
@@ -18,7 +19,7 @@ body {
     font-family: Arial, sans-serif;
     font-size: 5vw; /* 반응형 크기 단위 */
     font-weight: 200;
-    color: #000000;
+    color: #ffffff;
     text-align: center;
     opacity: 0.6;
     writing-mode: vertical-rl; /* 기본적으로 세로 쓰기 모드 */
@@ -53,7 +54,7 @@ body {
     font-family: Arial, sans-serif;
     font-size: 5vw; /* 반응형 크기 단위 */
     font-weight: 200;
-    color: #000000;
+    color: hsl(0, 0%, 100%);
     text-align: center;
     opacity: 0.6;
     writing-mode: vertical-rl; /* 기본적으로 세로 쓰기 모드 */
@@ -172,8 +173,3 @@ details[open] {
     background-color: #f9f9f9;
 }
 </style> */
-
-.dark-mode {
-    background-color: #000000;
-    color: white;
-  }

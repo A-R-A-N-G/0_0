@@ -96,11 +96,13 @@ td {
 }
 
 img {
+    width: 100%;
     max-width: 100%;
     height: auto;
     display: block;
     margin: 0 auto; /* 이미지 가운데 정렬을 원할 경우 */
-  }
+    object-fit: cover;
+}
 
 .highlight-right-border td:nth-child(1) {
     border-right: 0.5px solid black;
@@ -193,3 +195,15 @@ details[open] {
     background-color: #f9f9f9;
 }
 </style> */
+
+
+pre {
+    font-size: 16px; /* 기본 폰트 크기 설정 */
+}
+
+/* 모바일 화면에 대한 미디어 쿼리 */
+@media (max-width: 100%) {
+    pre {
+        font-size: 14px; /* 모바일 화면에서 폰트 크기 줄이기 */
+    }
+}

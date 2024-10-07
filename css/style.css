@@ -133,7 +133,7 @@ img {
     z-index: 1000;
     text-decoration: none;
     overflow-y: scroll;
-    max-height: 800px;
+    max-height: 600px;
     scrollbar-width: none;
 
 }   

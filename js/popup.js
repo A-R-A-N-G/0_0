@@ -9,3 +9,5 @@ function hidePopup() {
     document.querySelector('.popup').style.display = 'none';
     document.querySelector('.popup-overlay').style.display = 'none';
 }
+
+// 바탕 반전

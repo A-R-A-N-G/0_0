@@ -172,3 +172,8 @@ details[open] {
     background-color: #f9f9f9;
 }
 </style> */
+
+.dark-mode {
+    background-color: #000000;
+    color: white;
+  }

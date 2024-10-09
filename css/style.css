@@ -11,80 +11,6 @@ body {
     
 }
 
-.article_title2 {
-    position: fixed;
-    right: 5%;
-    bottom: 90%;
-    margin: 1px;
-    padding: 0;
-    font-family: 'joseon';
-    font-size: 5vw; /* 반응형 크기 단위 */
-    font-weight: 200;
-    color: #ffffff;
-    text-align: center;
-    opacity: 0.6;
-    writing-mode: vertical-rl; /* 기본적으로 세로 쓰기 모드 */
-    text-decoration: none;
-}
-
-/* 모바일 화면에 최적화된 설정 */
-@media (max-width: 768px) {
-    .article_title2 {
-        font-size: 9vw; /* 모바일에서는 글자 크기를 조금 더 키움 */
-        right: 3%; /* 모바일 화면에 맞게 위치 조정 */
-        bottom: 90%;
-        font-family: 'joseon';
-        /* writing-mode: horizontal-tb; 모바일에서는 수평 쓰기 모드 */
-    }
-}
-
-@media (max-width: 480px) {
-    .article_title2 {
-        font-size: 9vw; /* 작은 화면에서는 더 큰 글자 크기 */
-        right: 2%; /* 위치를 더 세밀하게 조정 */
-        bottom: 90%;
-        font-family: 'joseon';
-        /* writing-mode: horizontal-tb; 모바일에서는 수평 쓰기 모드 */
-    }
-}
-
-.article_title {
-    position: fixed;
-    right: 87%;
-    bottom: 90%;
-    margin: 1px;
-    padding: 0;
-    font-family: 'joseon';
-    font-size: 5vw; /* 반응형 크기 단위 */
-    font-weight: 200;
-    color: hsl(0, 0%, 100%);
-    text-align: center;
-    opacity: 0.6;
-    writing-mode: vertical-rl; /* 기본적으로 세로 쓰기 모드 */
-    text-decoration: none;
-}
-
-/* 모바일 화면에 최적화된 설정 */
-@media (max-width: 768px) {
-    .article_title {
-        font-size: 9vw; /* 모바일에서는 글자 크기를 조금 더 키움 */
-        right: 80%; /* 모바일 화면에 맞게 위치 조정 */
-        bottom: 90%;
-        font-family: 'joseon';
-        /* writing-mode: horizontal-tb; 모바일에서는 수평 쓰기 모드 */
-    }
-}
-
-@media (max-width: 480px) {
-    .article_title {
-        font-size: 9vw; /* 작은 화면에서는 더 큰 글자 크기 */
-        right: 80%; /* 위치를 더 세밀하게 조정 */
-        bottom: 90%;
-        font-family: 'joseon';
-        /* writing-mode: horizontal-tb; 모바일에서는 수평 쓰기 모드 */
-    }
-}
-
 
 table {
     border-collapse: collapse;
@@ -244,13 +170,16 @@ header {
     line-height: 2;
     border-bottom: 1px solid white;
     height: 60px;
+    text-decoration: none;
 }
 
 header .logo {
+    color: white;
     display: flex; /* logo를 flex 컨테이너로 설정 */
     justify-content: flex-end; /* 우측 정렬 */
     font-family: 'joseon';
     margin-right: 10px;
+    text-decoration: none;
 }
 
 header .logo a {
@@ -266,8 +195,7 @@ header .logo a {
 
 header .logo2
 {
-    display: flex;
-    color: rgb(255, 255, 255);
+    color: white;
     font-size: 1.2em;
     text-decoration: none;
     justify-content: left;
@@ -275,6 +203,19 @@ header .logo2
     font-family: 'joseon';
     margin-left: 10px;
 }
+
+header .logo2 a {
+    color: white; /* 항상 흰색으로 표시 */
+    text-decoration: none; /* 밑줄 제거 */
+}
+
+header .logo2 a:hover,
+header .logo2 a:focus,
+header .logo2 a:active {
+    color: white; /* 마우스를 올리거나 포커스 되었을 때도 흰색 유지 */
+    text-decoration: none; /* 선택될 때 밑줄 제거 */
+}
+
 
 /* 헤더 아래 내용의 상단 여백 추가 */
 body {

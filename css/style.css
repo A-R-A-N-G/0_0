@@ -7,6 +7,7 @@ body {
     color: #ffffff;
     padding: 0 10px;
     background-color: #000000;
+    font-family: 'joseon';
     
 }
 
@@ -16,7 +17,7 @@ body {
     bottom: 6%;
     margin: 1px;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'joseon';
     font-size: 5vw; /* 반응형 크기 단위 */
     font-weight: 200;
     color: #ffffff;
@@ -32,6 +33,7 @@ body {
         font-size: 9vw; /* 모바일에서는 글자 크기를 조금 더 키움 */
         right: 3%; /* 모바일 화면에 맞게 위치 조정 */
         bottom: 2%;
+        font-family: 'joseon';
         /* writing-mode: horizontal-tb; 모바일에서는 수평 쓰기 모드 */
     }
 }
@@ -41,6 +43,7 @@ body {
         font-size: 9vw; /* 작은 화면에서는 더 큰 글자 크기 */
         right: 2%; /* 위치를 더 세밀하게 조정 */
         bottom: 2%;
+        font-family: 'joseon';
         /* writing-mode: horizontal-tb; 모바일에서는 수평 쓰기 모드 */
     }
 }
@@ -51,7 +54,7 @@ body {
     bottom: 6%;
     margin: 1px;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'joseon';
     font-size: 5vw; /* 반응형 크기 단위 */
     font-weight: 200;
     color: hsl(0, 0%, 100%);
@@ -67,6 +70,7 @@ body {
         font-size: 9vw; /* 모바일에서는 글자 크기를 조금 더 키움 */
         right: 80%; /* 모바일 화면에 맞게 위치 조정 */
         bottom: 2%;
+        font-family: 'joseon';
         /* writing-mode: horizontal-tb; 모바일에서는 수평 쓰기 모드 */
     }
 }
@@ -76,6 +80,7 @@ body {
         font-size: 9vw; /* 작은 화면에서는 더 큰 글자 크기 */
         right: 80%; /* 위치를 더 세밀하게 조정 */
         bottom: 2%;
+        font-family: 'joseon';
         /* writing-mode: horizontal-tb; 모바일에서는 수평 쓰기 모드 */
     }
 }
@@ -137,6 +142,7 @@ img {
     overflow-y: scroll;
     max-height: 600px;
     scrollbar-width: none;
+    font-family: 'joseon';
 
 }
 
@@ -144,14 +150,14 @@ img {
     .popup {
         width: 80%; /* 화면 크기에 맞춰 팝업 너비 조정 */
         max-height: 80%; /* 화면 크기에 맞춰 최대 높이 조정 */
-    }
+        font-family: 'joseon';}
 }
 
 @media (max-width: 760px) {
     .popup {
         width: 80%; /* 화면 크기에 맞춰 팝업 너비 조정 */
         max-height: 80%; /* 화면 크기에 맞춰 최대 높이 조정 */
-    }
+        font-family: 'joseon';    }
 }
 
 /* 팝업을 가리기 위한 배경 스타일 */
@@ -205,5 +211,11 @@ pre {
 @media (max-width: 100%) {
     pre {
         font-size: 14px; /* 모바일 화면에서 폰트 크기 줄이기 */
-    }
+        font-family: 'joseon';    }
 }
+
+@font-face {
+    font-family: 'joseon';
+    src: url('../fonts/ChosunSm.TTF') format('truetype');
+}
+

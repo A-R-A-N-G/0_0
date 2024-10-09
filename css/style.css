@@ -14,7 +14,7 @@ body {
 .article_title2 {
     position: fixed;
     right: 5%;
-    bottom: 6%;
+    bottom: 90%;
     margin: 1px;
     padding: 0;
     font-family: 'joseon';
@@ -32,7 +32,7 @@ body {
     .article_title2 {
         font-size: 9vw; /* 모바일에서는 글자 크기를 조금 더 키움 */
         right: 3%; /* 모바일 화면에 맞게 위치 조정 */
-        bottom: 2%;
+        bottom: 90%;
         font-family: 'joseon';
         /* writing-mode: horizontal-tb; 모바일에서는 수평 쓰기 모드 */
     }
@@ -42,7 +42,7 @@ body {
     .article_title2 {
         font-size: 9vw; /* 작은 화면에서는 더 큰 글자 크기 */
         right: 2%; /* 위치를 더 세밀하게 조정 */
-        bottom: 2%;
+        bottom: 90%;
         font-family: 'joseon';
         /* writing-mode: horizontal-tb; 모바일에서는 수평 쓰기 모드 */
     }
@@ -51,7 +51,7 @@ body {
 .article_title {
     position: fixed;
     right: 87%;
-    bottom: 6%;
+    bottom: 90%;
     margin: 1px;
     padding: 0;
     font-family: 'joseon';
@@ -69,7 +69,7 @@ body {
     .article_title {
         font-size: 9vw; /* 모바일에서는 글자 크기를 조금 더 키움 */
         right: 80%; /* 모바일 화면에 맞게 위치 조정 */
-        bottom: 2%;
+        bottom: 90%;
         font-family: 'joseon';
         /* writing-mode: horizontal-tb; 모바일에서는 수평 쓰기 모드 */
     }
@@ -79,7 +79,7 @@ body {
     .article_title {
         font-size: 9vw; /* 작은 화면에서는 더 큰 글자 크기 */
         right: 80%; /* 위치를 더 세밀하게 조정 */
-        bottom: 2%;
+        bottom: 90%;
         font-family: 'joseon';
         /* writing-mode: horizontal-tb; 모바일에서는 수평 쓰기 모드 */
     }
@@ -219,3 +219,64 @@ pre {
     src: url('../fonts/ChosunSm.TTF') format('truetype');
 }
 
+
+
+
+
+/* 헤더  */
+
+/* 고정 헤더 스타일 */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    /* padding: 10px 20px; */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    font-family: 'joseon';
+
+    max-width: 650px;
+    line-height: 2;
+    border-bottom: 1px solid white;
+    height: 60px;
+}
+
+header .logo {
+    display: flex; /* logo를 flex 컨테이너로 설정 */
+    justify-content: flex-end; /* 우측 정렬 */
+    font-family: 'joseon';
+    margin-right: 10px;
+}
+
+header .logo a {
+    color: white;
+    font-size: 1.2em;
+    text-decoration: none;
+    margin-left: 10px;
+    justify-content: flex-end;
+    font-family: 'joseon';
+    margin-right: 10px;
+
+}
+
+header .logo2
+{
+    display: flex;
+    color: rgb(255, 255, 255);
+    font-size: 1.2em;
+    text-decoration: none;
+    justify-content: left;
+    width: 100%;
+    font-family: 'joseon';
+    margin-left: 10px;
+}
+
+/* 헤더 아래 내용의 상단 여백 추가 */
+body {
+    padding-top: 30px; /* 고정 헤더의 높이만큼 여백 추가 */
+}

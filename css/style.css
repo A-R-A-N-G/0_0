@@ -221,3 +221,8 @@ header .logo2 a:active {
 body {
     padding-top: 30px; /* 고정 헤더의 높이만큼 여백 추가 */
 }
+
+
+a:visited {
+    color: black;
+}

@@ -222,10 +222,19 @@ body {
     padding-top: 30px; /* 고정 헤더의 높이만큼 여백 추가 */
 }
 
+a{
+    color: white;
+    text-decoration-thickness: 1px;
+
+}
 
 a:visited {
-    color: black;
+    color: black; /* 방문한 링크 텍스트 색상 */
+    text-decoration: underline; /* 밑줄 표시 */
+    text-decoration-color: white; /* 밑줄 색상 */
+
 }
+
 
 summary::-webkit-details-marker { /* Safari 브라우저용 사용자 정의 스타일 */
     display: none;

@@ -149,12 +149,12 @@ pre {
 
 
 
-/* 헤더  */
+/* 푸터 */
 
-/* 고정 헤더 스타일 */
-header {
+/* 고정 푸터 스타일 */
+footer {
     position: fixed;
-    top: 0;
+    bottom: 0;
     width: 100%;
     background-color: black;
     color: white;
@@ -162,20 +162,18 @@ header {
     justify-content: right;
     align-items: center;
     /* padding: 10px 20px; */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* 그림자 방향 위로 */
     z-index: 1000;
     font-family: 'joseon';
 
     max-width: 650px;
     line-height: 2;
-    border-bottom: 1.3px solid white;
+    border-top: 1.3px solid white; /* 위쪽 경계선 */
     height: 60px;
     text-decoration: none;
-
-
 }
 
-header .logo {
+footer .logo {
     color: white;
     display: flex; /* logo를 flex 컨테이너로 설정 */
     justify-content: flex-end; /* 우측 정렬 */
@@ -184,7 +182,7 @@ header .logo {
     text-decoration: none;
 }
 
-header .logo a {
+footer .logo a {
     color: white;
     font-size: 1.2em;
     text-decoration: none;
@@ -192,11 +190,9 @@ header .logo a {
     justify-content: flex-end;
     font-family: 'joseon';
     margin-right: 10px;
-
 }
 
-header .logo2
-{
+footer .logo2 {
     color: white;
     font-size: 1.2em;
     text-decoration: none;
@@ -206,22 +202,24 @@ header .logo2
     margin-left: 10px;
 }
 
-header .logo2 a {
+footer .logo2 a {
     color: white; /* 항상 흰색으로 표시 */
     text-decoration: none; /* 밑줄 제거 */
 }
 
-header .logo2 a:hover,
-header .logo2 a:focus,
-header .logo2 a:active {
+footer .logo2 a:hover,
+footer .logo2 a:focus,
+footer .logo2 a:active {
     color: white; /* 마우스를 올리거나 포커스 되었을 때도 흰색 유지 */
     text-decoration: none; /* 선택될 때 밑줄 제거 */
 }
 
 
+
+
 /* 헤더 아래 내용의 상단 여백 추가 */
 body {
-    padding-top: 30px; /* 고정 헤더의 높이만큼 여백 추가 */
+    padding-bottom: 30px; /* 고정 푸터의 높이만큼 여백 추가 */
 }
 
 a{

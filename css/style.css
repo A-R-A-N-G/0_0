@@ -1,6 +1,6 @@
 
 body {
-    margin: 40px auto;
+    margin: 10px auto;
     max-width: 650px;
     line-height: 1.6;
     font-size: 18px;
@@ -157,7 +157,7 @@ footer {
     bottom: 0;
     width: 100%;
     background-color: black;
-    color: white;
+    color: rgb(255, 255, 255);
     display: flex;
     justify-content: right;
     align-items: center;
@@ -168,8 +168,8 @@ footer {
 
     max-width: 650px;
     line-height: 2;
-    border-top: 1.3px solid white; /* 위쪽 경계선 */
-    height: 60px;
+    border-top: 1.3px solid rgb(0, 0, 0); /* 위쪽 경계선 */
+    height: 50px;
     text-decoration: none;
 }
 

@@ -9,124 +9,108 @@
     </head>
     <body>
         <!-- 고정 헤더 -->
-    <header>
-        <div class="logo2">
-            부산
-        </div>
-        <div class="logo">
-            <a href="../index.html">0_0</a> <!-- index.html로 이동하는 링크 -->
-        </div>
-    </header>
-    <p style="text-align: left;">활자</p>
-    <hr>
-    <div style="color: rgb(255, 255, 255); background-color: black;" >
-        <a href="#"onclick="showPopup(event,'활자')">말이 재밌는 도시</a>
-        <br>저는 표현할 줄 아는 사람들이 좋습니다
-            <br>:)
-            <br>:)
-            <br>:)
-            <br>:)
-            <br>:)
-        
+        <header>
+            <div class="logo2">
+                부산
+            </div>
+            <div class="logo">
+                <a href="../index.html">0_0</a> <!-- index.html로 이동하는 링크 -->
+            </div>
+        </header>
+        <img src="../images/부산/부락.jpg" alt="부락 이미지">
+        <div style="color: rgb(255, 255, 255); background-color: black;" >
+            <a href="#"onclick="showPopup(event,'ㄱ')">날씨</a>가 정말 너무 좋았다. 딱 가을과 여름 사이 좋은 날씨
+            카사비안 하나 보고 내려 갔는데 글렌체크 오랜만에 보니까 너무 신나긴 했다. 이상은 못본건 너무 아쉽.
+            <br>  
+        </div> 
+        <br>
+        <img src="../images/부산/훔훔.jpg" alt="">
+        그리고 <a href="#"onclick="showPopup(event,'활자')">말</a>이 재밌는 도시. 저는 표현할 줄 아는 사람들이 좋습니다
         <br>  
     </div>
-    <hr>
-    <p style="text-align: left;">부락</p>
-    <hr>
-    <div style="color: rgb(255, 255, 255); background-color: black;" >
-        날씨가 정말 너무 좋았다. 딱 가을과 여름 사이 <a href="#"onclick="showPopup(event,'ㄱ')">좋은 날씨</a>
-        카사비안 하나 보고 내려 갔는데 글렌체크 오랜만에 보니까 너무 신나긴 했다. 이상은 못본건 너무 아쉽.
-        <br>  
-    </div>
-    <hr>   
+    <br>
     <div>
         
-        <p style="text-align: left;">건물</p>
-        <hr>
+        <img src="../images/부산/상가.jpg" alt="">
+    <div style="color: rgb(255, 255, 255); background-color: black;" >
+        유치하지만 <a href="#" onclick="showPopup(event, '알록달록')">알록달록한</a> 색의 건물 많아서 기억에 남는다. 이런 말하기 좀 그럴수 있지만 서울에서는
+        집 건물 색이 노랑이거나 분홍 등이면 어릴때 "느그집 민트색" 이렇게 놀릴꺼 같은데 여기서는 좀 흔한것 같다.
+        경남 해안가다 보니 산업적으로 조선업이나 중화학업에서 파생된 페인트 수요가 생활용으로도 이어지지 않았을까 하는 추측을 해본다.
+        <a href="#" onclick="showPopup(event,'알록달록 주석')">**</a>        
+        <br>
+        <br>
+
     </div>
+    
+</div>
+<br>
+<div> 
+    <img src="../images/부산/해방자유.jpg" alt="">
+    남는 시간에는 점 찍어둔데나 추천 받은곳들 둘러봤다. 배방자유 인스타 추천에 자주 떠서 가봤는데 빈티지라 그런지 사이즈가 다 안맞을꺼 같아서 스킵. 
+    
+    <br>
+    <br>
+    <img src="../images/부산/굿즈.jpg" alt="">
+    서면에서 애즈 들렀다. 이 <a href="#" onclick="showPopup(event,'굿즈')">네잎 클로버</a> 언젠가는 필요할꺼 같아서 한 장에 2000원에 샀는데 그날 일이 생길뻔 했다. 저녁에 친구랑 숙소 가는데 지하철에서
+    정말 너무 너무 서럽게 울는 스케이트보드걸이 있었다. 진짜 너무 서러워보여서 자리 앉으실때 생각난 네잎 클로버 한장 정중히 건넸는데 한사코 거절 하셨다. 이해합니다.
+        하지만 지나고나면 이 모든게 다 별일 아닌것들이 될꺼에여 스케이트보드걸
+        <br>
+    </div>
+    
 </div>
 
-<div>
+<!-- 팝업 오버레이 -->
+<div class="popup-overlay" onclick="hidePopup()"></div>
+
+<!-- 팝업 내용 -->
+
+<div class="popup">
     
-    <div style="color: rgb(255, 255, 255); background-color: black;" >
-        유치하지만 알록달록한 색의 건물 많아서 기억에 남는다. 이런 말하기 좀 그럴수 있지만 서울에서는
-        집 건물 색이 <a href="#" onclick="showPopup(event, '알록달록')">노랑이거나 분홍 등</a>이면 어릴때 "느그집 민트색" 이렇게 놀릴꺼 같은데 여기서는 좀 흔한것 같다.
-        경남 해안가다 보니 산업적으로 조선업이나 중화학업에서 파생된 페인트 수요가 생활용으로도 이어지지 않았을까 하는 추측을 해본다. 
-        원색이 주는 느낌 올드함을 너머로 엠즤이 세대가 갈만한 트렌디한 가게들도 많았다. 이거는 좀 분명히 느낀 부분인데 디지털 인스타 도입되면서
-        바로 미적으로 확 건너뛴 느낌? 그러니까 옛날 유행 - 조금 옛날 유행 - 요즘 유행 이렇게 단계적으로 바뀐게 아니라 옛날 유행 - 요즘 유행 바로 점프한것 같다. 
-                위 활자랑 이런 색상 측면이 합쳐지면 부산 특유의 느낌이 나서 좋았다.
-                <br>
-                
-                <hr>
-            </div>
-            
-        </div>
-        <p style="text-align: left;">네잎클로버</p>
-        <hr>
-        <div>
-            <div style="color: rgb(255, 255, 255); background-color: black;" >       
-                남는 시간에는 점 찍어둔데나 추천 받은곳들 둘러봤다. <a href="#" onclick="showPopup(event, '해방자유')">해방자유</a> 인스타 추천에 자주 떠서 가봤는데 빈티지라 그런지 사이즈가 다 안맞을꺼 같아서 스킵. 
-                서면에서 애즈 들렀다. 저 <a href="#" onclick="showPopup(event,'굿즈')">네잎 클로버</a> 언젠가는 필요할꺼 같아서 한 장에 2000원에 샀는데 그날 일이 생길뻔 했다. 저녁에 친구랑 숙소 가는데 지하철에서
-                정말 너무 너무 서럽게 울는 스케이트보드걸이 있었다. 진짜 너무 서러워보여서 자리 앉으실때 생각난 네잎 클로버 한장 정중히 건넸는데 한사코 거절 하셨다. 이해합니다.
-                하지만 지나고나면 이 모든게 다 별일 아닌것들이 될꺼에여 스케이트보드걸
-                <br>
-            </div>
-            
-        </div>
+</div>
 
-        <!-- 팝업 오버레이 -->
-        <div class="popup-overlay" onclick="hidePopup()"></div>
-        
-        <!-- 팝업 내용 -->
-        
-        <div class="popup">
-            
-        </div>
+<div class="popup" id="활자">
+    <img src="../images/부산/어서오십시오.jpg" alt="">
+    <img src="../images/부산/남성 캐주얼화.jpg" alt="">
+    <img src="../images/부산/우갈탕.jpg" alt="">
+    <img src="../images/부산/돼지게티.jpg" alt="">
+    <img src="../images/부산/폐업.jpg" alt="">
+    <img src="../images/부산/슬리퍼.jpg" alt="">d
+    <img src="../images/부산/시.jpg" alt="">
+    <img src="../images/부산/버리지 말아주세요.jpg" alt="">
+</div>
 
-        <div class="popup" id="활자">
-            <img src="../images/부산/어서오십시오.jpg" alt="">
-            <img src="../images/부산/훔훔.jpg" alt="">
-            <img src="../images/부산/남성 캐주얼화.jpg" alt="">
-            <img src="../images/부산/우갈탕.jpg" alt="">
-            <img src="../images/부산/돼지게티.jpg" alt="">
-            <img src="../images/부산/폐업.jpg" alt="">
-            <img src="../images/부산/슬리퍼.jpg" alt="">d
-            <img src="../images/부산/시.jpg" alt="">
-            <img src="../images/부산/버리지 말아주세요.jpg" alt="">
-        </div>
-        
-        <div class="popup" id="ㄱ">
-            <img src="../images/부산/부락.jpg" alt="부락 이미지">  
+<div class="popup" id="ㄱ">
             <br>
             <img src="../images/부산/하천.jpg" alt="하천 이미지">
             <br>
             <img src="../images/부산/씹덕.jpg" alt="">
         </div>
-
+        
         <div class="popup" id="알록달록">
-    <img src="../images/부산/노랑.jpg" alt="">        
-    <br>
-    <img src="../images/부산/보라.jpg" alt="">
-    <br>
-    <img src="../images/부산/핑크.jpg" alt="">
-    <br>
-    <img src="../images/부산/부국영.jpg" alt="">
-    <br>        
-    <img src="../images/부산/멋쟁이.jpg" alt="">  
-</div>
+            <img src="../images/부산/보라.jpg" alt="">
+            <img src="../images/부산/노랑.jpg" alt="">        
+            <br>
+            <br>
+            <img src="../images/부산/핑크.jpg" alt="">
+            <br>
+            <img src="../images/부산/부국영.jpg" alt="">
+            <br>        
+            <img src="../images/부산/멋쟁이.jpg" alt="">  
+        </div>
 
-<div class="popup" id="굿즈">
-    <img src="../images/부산/굿즈.jpg" alt="">
-    <br>
-    <img src="../images/부산/상가.jpg" alt="">
-    <br>
-    <img src="../images/부산/파도.jpg" alt="">
+        <div class="popup" id="알록달록 주석">
+            <img src="../images/부산/파도.jpg" alt="">
+            원색이 주는 느낌 올드함을 너머로 엠즤이 세대가 갈만한 트렌디한 가게들도 많았다. 이거는 좀 분명히 느낀 부분인데 디지털 인스타 도입되면서 바로 미적으로 확 건너뛴 느낌? 그러니까 옛날 유행 - 조금 옛날 유행 - 요즘 유행 이렇게 단계적으로 바뀐게 아니라 옛날 유행 - 요즘 유행 바로 점프한것 같다. 위 활자랑 이런 색상 측면이 합쳐지면 부산 특유의 느낌이 나서 좋았다.
+        </div>
+        
+        <br>
+        <br>
+        <div class="popup" id="굿즈">
+            네잎 클로버는 네 잎을 가지는, 토끼풀속의 기형이다. 예부터 전해지는 미신에서는 행운을 가져온다고 한다.
+        </div>
+        
 
-</div>
-
-<div class="popup" id="해방자유">
-    <img src="../images/부산/해방자유.jpg" alt="">
-</div>
+    </div>
 
 <script src="../js/popup.js"></script>
 

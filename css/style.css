@@ -61,12 +61,12 @@ img {
     border: 2px solid #333;
     color: white;
     padding: 10px 5px;
-    width: 300px;
+    width: 90%; /* 화면 크기에 맞춰 팝업 너비 조정 */
+    max-height: 90%; /* 화면 크기에 맞춰 최대 높이 조정 */
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     z-index: 1000;
     text-decoration: none;
     overflow-y: scroll;
-    max-height: 600px;
     scrollbar-width: none;
     font-family: 'joseon';
 
@@ -74,15 +74,15 @@ img {
 
 @media (max-width: 480px) {
     .popup {
-        width: 80%; /* 화면 크기에 맞춰 팝업 너비 조정 */
-        max-height: 80%; /* 화면 크기에 맞춰 최대 높이 조정 */
+        width: 90%; /* 화면 크기에 맞춰 팝업 너비 조정 */
+        max-height: 90%; /* 화면 크기에 맞춰 최대 높이 조정 */
         font-family: 'joseon';}
 }
 
 @media (max-width: 760px) {
     .popup {
-        width: 80%; /* 화면 크기에 맞춰 팝업 너비 조정 */
-        max-height: 80%; /* 화면 크기에 맞춰 최대 높이 조정 */
+        width: 90%; /* 화면 크기에 맞춰 팝업 너비 조정 */
+        max-height: 90%; /* 화면 크기에 맞춰 최대 높이 조정 */
         font-family: 'joseon';    }
 }
 

@@ -168,9 +168,11 @@ header {
 
     max-width: 650px;
     line-height: 2;
-    border-bottom: 1px solid white;
+    border-bottom: 1.3px solid white;
     height: 60px;
     text-decoration: none;
+
+
 }
 
 header .logo {
@@ -224,13 +226,14 @@ body {
 
 a{
     color: white;
-    text-decoration: none; /* 밑줄 표시 */
+    text-decoration-thickness: 0.7px;
+    text-underline-offset : 5px;
+
+    padding-bottom: 1px; /* 아랫부분에 약간의 패딩 추가 (HR과 비슷한 위치를 위해) */
+    display: inline-block; /* 인라인 블록으로 설정하여 마진 조정 가능 */
 }
 
-a.popup {
-    color: white;
-    font-style: italic; /* 팝업 링크에만 이탤릭체 적용 */
-}
+
 
 
 summary::-webkit-details-marker { /* Safari 브라우저용 사용자 정의 스타일 */
@@ -238,4 +241,18 @@ summary::-webkit-details-marker { /* Safari 브라우저용 사용자 정의 스
 }
 summary {
     list-style-type: none; /* 그 외의 브라우저용 사용자 정의 스타일 */
+}
+
+hr {
+    height: 1px; /* 두께 설정 */
+    background-color: white; /* 색상 설정 */
+    border: none; /* 테두리 제거 */
+    margin: 3; /* 마진 제거 (헤더와 일치하도록) */
+    margin-top: 0; /* hr 위쪽 마진을 0으로 설정 */
+    margin-bottom: 10px; /* hr 아래쪽 마진 조정 */
+}
+
+p {
+    margin-top: 15px; /* 위쪽 마진 */
+    margin-bottom: 15px; /* 아래쪽 마진 */
 }

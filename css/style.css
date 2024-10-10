@@ -156,7 +156,7 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: black;
+    background-color: ta;
     color: rgb(255, 255, 255);
     display: flex;
     justify-content: right;
@@ -168,7 +168,7 @@ footer {
 
     max-width: 650px;
     line-height: 2;
-    border-top: 1.3px solid rgb(0, 0, 0); /* 위쪽 경계선 */
+    border-top: 1.3px solid rgba(0, 0, 255, 0.5); /* 파란색, 50% 투명도 */
     height: 50px;
     text-decoration: none;
 }

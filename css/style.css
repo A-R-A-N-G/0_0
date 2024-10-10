@@ -224,15 +224,12 @@ body {
 
 a{
     color: white;
-    text-decoration-thickness: 1px;
-
+    text-decoration: none; /* 밑줄 표시 */
 }
 
-a:visited {
-    color: black; /* 방문한 링크 텍스트 색상 */
-    text-decoration: underline; /* 밑줄 표시 */
-    text-decoration-color: white; /* 밑줄 색상 */
-
+a.popup {
+    color: white;
+    font-style: italic; /* 팝업 링크에만 이탤릭체 적용 */
 }
 
 

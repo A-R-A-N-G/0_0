@@ -2,14 +2,26 @@
 body {
     margin: 10px auto;
     max-width: 650px;
-    line-height: 1.6;
+    line-height: 1.5;
     font-size: 18px;
     color: #ffffff;
     padding: 0 10px;
     background-color: #000000;
     font-family: 'joseon';
+    letter-spacing: 0.5;
+
     
 }
+
+@media (max-width: 768px) {
+    body {
+        font-size: 13px; /* 모바일 화면에서 폰트 크기 조정 */
+        letter-spacing: 0.5;
+        line-height: 1.5;
+        
+    }
+}
+
 
 
 table {
@@ -78,6 +90,7 @@ img {
         max-height: 90%; /* 화면 크기에 맞춰 최대 높이 조정 */
         font-family: 'joseon';}
 }
+
 
 @media (max-width: 760px) {
     .popup {
@@ -171,6 +184,7 @@ footer {
     border-top: 1.5px solid rgba(0, 0, 255, 0.5); /* 파란색, 50% 투명도 */
     height: 50px;
     text-decoration: none;
+
 }
 
 footer .logo {

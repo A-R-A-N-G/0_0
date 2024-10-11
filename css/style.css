@@ -9,7 +9,6 @@ body {
     background-color: #000000;
     font-family: 'joseon';
     letter-spacing: 0.5;
-
     
 }
 
@@ -260,7 +259,7 @@ hr {
     background-color: white; /* 색상 설정 */
     border: none; /* 테두리 제거 */
     margin: 3; /* 마진 제거 (헤더와 일치하도록) */
-    margin-top: 0; /* hr 위쪽 마진을 0으로 설정 */
+    margin-top: 10; /* hr 위쪽 마진을 0으로 설정 */
     margin-bottom: 10px; /* hr 아래쪽 마진 조정 */
     background-color: rgba(0, 0, 255, 0.5); /* 색상과 불투명도 설정 */
 }

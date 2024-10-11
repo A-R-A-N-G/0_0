@@ -14,12 +14,10 @@
         </div>
         
         <div class="logo">
-            <!-- <a href="../index.html">0_0</a> index.html로 이동하는 링크 -->
+            <a href="#"onclick="showPopup(event,'고객님')">+</a>
         </div>
     </footer>
-    <img src="../images/부산/고객님 .jpg" alt="">
-    <hr>
-    <br>
+
     <div style="color: rgb(255, 255, 255); background-color: black;">
         부산에는 투박하지만 솔직한 표현들이 많아서 좋았다. 글과 미디어를 포함한 매체는 표현에 근본적으로 표현과 커뮤니케이션을 위한것이다.
         만일 커뮤니케이션 이라는 행위 속에 본질적으로 표현되고자하는 속뜻과 이를 드러내는 매체라는 겉표현의 
@@ -40,6 +38,21 @@
         사장님 부터 이리저리 친절하게 길을 알려주는 행인들까지 솔직한 언어가 주는 친근함을 오랜만에 느꼇다.
         <br>
         <br>
+
+        
+        <!-- 팝업 오버레이 -->
+        <div class="popup-overlay" onclick="hidePopup()"></div>
+        
+        <!-- 팝업 내용 -->
+        
+        <div class="popup">
+            
+        </div>
+        
+        <div class="popup" id="고객님">
+            <img src="../images/부산/고객님 .jpg" alt="">
+        </div>
+        <script src="../js/popup.js"></script>
 
 </body>
 </html>

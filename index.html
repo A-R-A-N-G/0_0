@@ -45,14 +45,34 @@
             const details1 = document.getElementById('info-details1');
             const contentDiv1 = document.getElementById('info-content1');
         
+            // 페이지가 로드될 때 details의 열림 상태를 복원합니다.
+            window.addEventListener('load', () => {
+                const isOpen = sessionStorage.getItem('details1Open');
+                if (isOpen === 'true') {
+                    details1.open = true; // 상태가 'true'면 details를 엽니다.
+                }
+            });
+        
             // details가 열릴 때 콘텐츠를 불러옵니다.
             details1.addEventListener('toggle', async () => {
+                // 현재 열림 상태를 저장합니다.
+                sessionStorage.setItem('details1Open', details1.open);
+        
                 if (details1.open) {
                     try {
                         const response = await fetch("./templates/갑자기.html"); // 파일.html 경로
                         if (response.ok) {
                             const text = await response.text();
-                            contentDiv1.innerHTML = text; // 가져온 내용을 삽입
+        
+                            // 가져온 HTML에서 <footer> 태그를 제거
+                            const parser = new DOMParser();
+                            const doc = parser.parseFromString(text, 'text/html');
+                            const footer = doc.querySelector('footer');
+                            if (footer) {
+                                footer.remove(); // footer 요소 제거
+                            }
+        
+                            contentDiv1.innerHTML = doc.body.innerHTML; // 나머지 내용을 삽입
                         } else {
                             contentDiv1.innerHTML = '내용을 가져오는 중 오류가 발생했습니다.';
                         }
@@ -62,6 +82,8 @@
                 }
             });
         </script>
+        
+        
 
         <!-- <details id="info-details2">
             <summary>*<hr></summary>
@@ -69,7 +91,7 @@
             <hr>
         </details>
         
-        <script>
+        <scipt>
             // 두 번째 details 요소를 가져옵니다.
             const details2 = document.getElementById('info-details2');
             const contentDiv2 = document.getElementById('info-content2');

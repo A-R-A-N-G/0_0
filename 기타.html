@@ -1,0 +1,16 @@
+// '자세히 보기' 버튼 클릭 이벤트 핸들러
+kakao.maps.event.addListener(infowindow, 'domready', (function(infowindow, i) {
+    return function() {
+        document.getElementById(`moreInfoBtn${i}`).onclick = function() {
+            // 여기서 인포윈도우의 내용을 업데이트
+            infowindow.setContent(`
+                <div style="padding:5px; font-size:14px; color:black;">
+                    <strong>${positions[i].title}</strong><br>
+                    <p>${positions[i].content}</p>
+                    <strong>추가 정보:</strong><br>
+                    ㄱㄱ
+                </div>
+            `);
+        };
+    };
+})(infowindow, i));

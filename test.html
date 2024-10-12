@@ -34,6 +34,7 @@
 
     <br>   
     <hr>
+    <hr>
     <details>
         <summary>
             갑자기 쓰고 싶은글 
@@ -81,124 +82,7 @@
     
     
     </details>
-    <hr>
-
-    <details id="info-details">
-        <summary>1.</summary>
-        <div id="info-content">여기에 내용이 표시됩니다.</div>
-    </details>
-
-    <script>
-        // details 요소를 가져옵니다.
-        const details = document.getElementById('info-details');
-        const contentDiv = document.getElementById('info-content');
-
-        // details가 열릴 때 콘텐츠를 불러옵니다.
-        details.addEventListener('toggle', async () => {
-            if (details.open) {
-                try {
-                    const response = await fetch("./templates2/1.html"); // 파일.html 경로
-                    if (response.ok) {
-                        const text = await response.text();
-                        contentDiv.innerHTML = text; // 가져온 내용을 삽입
-                    } else {
-                        contentDiv.innerHTML = '내용을 가져오는 중 오류가 발생했습니다.';
-                    }
-                } catch (error) {
-                    contentDiv.innerHTML = '내용을 가져오는 중 오류가 발생했습니다.';
-                }
-            }
-        });
-    </script>
-    
-    
-    <!-- <table>
-        <tbody>
-            <tr>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-    
-            <tr>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-    
-            <tr>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-    
-            <tr>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-    
-            <tr>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-    
-            <tr>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-    
-            <tr>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-    
-            <tr>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-    
-            <tr>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-    
-            <tr>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-        </tbody>
-    </table> -->
-    
 
 
-
-           
 </body>
 </html>

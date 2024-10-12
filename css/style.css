@@ -9,6 +9,7 @@ body {
     background-color: #000000;
     font-family: 'joseon';
     letter-spacing: 0.5;
+    /* overflow: hidden; */
     
 }
 
@@ -268,5 +269,18 @@ p {
     margin-top: 15px; /* 위쪽 마진 */
     margin-bottom: 15px; /* 아래쪽 마진 */
 }
+
+
+iframe {
+    width: 100%;       /* 화면 너비에 맞게 펼치기 */
+    height: 1000px;     /* 원하는 높이로 설정 (필요에 따라 조절 가능) */
+    border: none;      /* 테두리 제거 */
+    overflow: hidden;  /* 스크롤바 숨기기 */
+    object-fit: cover;
+    display: block;
+    margin-top: 0;
+    margin-right: 0%;
+}
+
 
 

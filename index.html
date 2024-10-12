@@ -79,37 +79,66 @@
         감사함. 그런 제약 속에 그나마 있는 나, 그나마 잔재가 남은 인정과 칭찬. 동질감. 이런 제약이 나의 문제가 아니라 우리 모두의 고민이라는 공유. 
         그리고 수용. 이 모든게 삶의 과정이라고 받아들이는 겸손함까지. 금요일 저녁 갑자기 생각이 툭하고 피어오르다 차르르 가라앉는다.
     
-    
-    </details>
-    <hr>
+        </details>
+        <hr>
 
-    <details id="info-details">
-        <summary>1.</summary>
-        <div id="info-content">여기에 내용이 표시됩니다.</div>
-    </details>
-
-    <script>
-        // details 요소를 가져옵니다.
-        const details = document.getElementById('info-details');
-        const contentDiv = document.getElementById('info-content');
-
-        // details가 열릴 때 콘텐츠를 불러옵니다.
-        details.addEventListener('toggle', async () => {
-            if (details.open) {
-                try {
-                    const response = await fetch("./templates2/1.html"); // 파일.html 경로
-                    if (response.ok) {
-                        const text = await response.text();
-                        contentDiv.innerHTML = text; // 가져온 내용을 삽입
-                    } else {
-                        contentDiv.innerHTML = '내용을 가져오는 중 오류가 발생했습니다.';
+        <details id="info-details1">
+            <summary>실존<hr></summary>
+            <div id="info-content1"></div>
+        </details>
+        
+        <script>
+            // 첫 번째 details 요소를 가져옵니다.
+            const details1 = document.getElementById('info-details1');
+            const contentDiv1 = document.getElementById('info-content1');
+        
+            // details가 열릴 때 콘텐츠를 불러옵니다.
+            details1.addEventListener('toggle', async () => {
+                if (details1.open) {
+                    try {
+                        const response = await fetch("./templates2/1.html"); // 파일.html 경로
+                        if (response.ok) {
+                            const text = await response.text();
+                            contentDiv1.innerHTML = text; // 가져온 내용을 삽입
+                        } else {
+                            contentDiv1.innerHTML = '내용을 가져오는 중 오류가 발생했습니다.';
+                        }
+                    } catch (error) {
+                        contentDiv1.innerHTML = '내용을 가져오는 중 오류가 발생했습니다.';
                     }
-                } catch (error) {
-                    contentDiv.innerHTML = '내용을 가져오는 중 오류가 발생했습니다.';
                 }
-            }
-        });
-    </script>
+            });
+        </script>
+
+        <details id="info-details2">
+            <summary>꿈<hr></summary>
+            <div id="info-content2"></div>
+        </details>
+        
+        <script>
+            // 두 번째 details 요소를 가져옵니다.
+            const details2 = document.getElementById('info-details2');
+            const contentDiv2 = document.getElementById('info-content2');
+        
+            // details가 열릴 때 콘텐츠를 불러옵니다.
+            details2.addEventListener('toggle', async () => {
+                if (details2.open) {
+                    try {
+                        const response = await fetch("./templates2/38.html"); // 파일.html 경로
+                        if (response.ok) {
+                            const text = await response.text();
+                            contentDiv2.innerHTML = text; // 가져온 내용을 삽입
+                        } else {
+                            contentDiv2.innerHTML = '내용을 가져오는 중 오류가 발생했습니다.';
+                        }
+                    } catch (error) {
+                        contentDiv2.innerHTML = '내용을 가져오는 중 오류가 발생했습니다.';
+                    }
+                }
+            });
+        </script>
+        
+        
     
     
     <!-- <table>

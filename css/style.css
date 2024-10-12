@@ -9,7 +9,6 @@ body {
     background-color: #000000;
     font-family: 'joseon';
     letter-spacing: 0.5;
-    /* overflow: hidden; */
     
 }
 
@@ -248,12 +247,12 @@ a{
 
 
 
-summary::-webkit-details-marker { /* Safari 브라우저용 사용자 정의 스타일 */
+/* summary::-webkit-details-marker { 
     display: none;
 }
 summary {
-    list-style-type: none; /* 그 외의 브라우저용 사용자 정의 스타일 */
-}
+    list-style-type: none; 
+} */
 
 hr {
     height: 1.0px; /* 두께 설정 */

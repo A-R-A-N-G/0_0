@@ -131,6 +131,56 @@
                 }
             });
         </script>
+
+<details id="info-details3">
+    <summary><hr></summary>
+    <div id="info-content3"></div>
+    <hr>
+</details>
+
+<script>
+    // 두 번째 details 요소를 가져옵니다.
+    const details3 = document.getElementById('info-details3');
+    const contentDiv3 = document.getElementById('info-content3'); // contentDiv3로 통일
+
+    // 페이지가 로드될 때 details의 열림 상태를 복원합니다.
+    window.addEventListener('load', () => {
+        const isOpen = sessionStorage.getItem('details3Open');
+        if (isOpen === 'true') {
+            details3.open = true; // 상태가 'true'면 details를 엽니다.
+        }
+    });
+
+    // details가 열릴 때 콘텐츠를 불러옵니다.
+    details3.addEventListener('toggle', async () => {
+        // 현재 열림 상태를 저장합니다.
+        sessionStorage.setItem('details3Open', details3.open);
+
+        if (details3.open) {
+            try {
+                const response = await fetch("./templates/효율적인 거짓말.html"); // 파일.html 경로
+                if (response.ok) {
+                    const text = await response.text();
+
+                    // 가져온 HTML에서 <footer> 태그를 제거
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(text, 'text/html');
+                    const footer = doc.querySelector('footer');
+                    if (footer) {
+                        footer.remove(); // footer 요소 제거
+                    }
+
+                    contentDiv3.innerHTML = doc.body.innerHTML; // contentDiv3로 수정
+                } else {
+                    contentDiv3.innerHTML = '내용을 가져오는 중 오류가 발생했습니다.'; 
+                }
+            } catch (error) {
+                contentDiv3.innerHTML = '내용을 가져오는 중 오류가 발생했습니다.';
+            }
+        }
+    });
+</script>
+
         
        
     

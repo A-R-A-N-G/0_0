@@ -34,7 +34,7 @@ td {
     vertical-align: middle;
     width: 10%;
     height: 10%;
-    border: white;
+    border: white;;
 }
 
 img {
@@ -267,6 +267,7 @@ hr {
 p {
     margin-top: 15px; /* 위쪽 마진 */
     margin-bottom: 15px; /* 아래쪽 마진 */
+    font-family: "Roboto Condensed", sans-serif;
 }
 
 /* .infowindow {
@@ -280,5 +281,6 @@ p {
     width: 100%;
     height: auto;
 } */
+
 
 

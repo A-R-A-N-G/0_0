@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
@@ -13,282 +13,177 @@
     <title>Document</title>
 
     <link rel="stylesheet" type="text/css" href="./css/style.css">
-    <!-- <a href="index.html" class="article_title">가</a> -->
-
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5892XK94"
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5892XK94"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <footer>
-        <div class="logo2">
-            <a href="landing.html">:)</a>
-        </div>
+        <table>
+            <tbody>
+                <tr>
+                    <td><a href="./landing.html">1</a></td>
+                    <td><a href="./index.html">2</a></td>
+                    <td><a href="./index2.html">3</a></td>
+                    <td><a href="./index3.html">4</a></td>
+                </tr>
         
-        <div class="logo">
-            <a href="./index2.html">∞</a> <!-- index.html로 이동하는 링크 -->
-        </div>
+        
+            </tbody>
+        
+        </table>
     </footer>
-    <p style="text-align: left;"  >갑자기 쓰고 싶은 글</p>
+    <p style="text-align: left;" >갑자기 쓰고 싶은 글</p>
     <hr>
-        <details id="info-details1">
-            <summary><hr></summary>
-            <div id="info-content1"></div>
-            <hr>
-        </details>
-        
-        <script>
-            // 첫 번째 details 요소를 가져옵니다.
-            const details1 = document.getElementById('info-details1');
-            const contentDiv1 = document.getElementById('info-content1');
-        
-            // 페이지가 로드될 때 details의 열림 상태를 복원합니다.
-            window.addEventListener('load', () => {
-                const isOpen = sessionStorage.getItem('details1Open');
-                if (isOpen === 'true') {
-                    details1.open = true; // 상태가 'true'면 details를 엽니다.
-                }
-            });
-        
-            // details가 열릴 때 콘텐츠를 불러옵니다.
-            details1.addEventListener('toggle', async () => {
-                // 현재 열림 상태를 저장합니다.
-                sessionStorage.setItem('details1Open', details1.open);
-        
-                if (details1.open) {
-                    try {
-                        const response = await fetch("./templates/인정.html"); // 파일.html 경로
-                        if (response.ok) {
-                            const text = await response.text();
-        
-                            // 가져온 HTML에서 <footer> 태그를 제거
-                            const parser = new DOMParser();
-                            const doc = parser.parseFromString(text, 'text/html');
-                            const footer = doc.querySelector('footer');
-                            if (footer) {
-                                footer.remove(); // footer 요소 제거
-                            }
-        
-                            contentDiv1.innerHTML = doc.body.innerHTML; // 나머지 내용을 삽입
-                        } else {
-                            contentDiv1.innerHTML = '내용을 가져오는 중 오류가 발생했습니다.';
-                        }
-                    } catch (error) {
-                        contentDiv1.innerHTML = '내용을 가져오는 중 오류가 발생했습니다.';
-                    }
-                }
-            });
-        </script>
-        
-        
-
-        <details id="info-details2">
-            <summary><hr></summary>
-            <div id="info-content2"></div>
-            <hr>
-        </details>
-        
-        <script>
-            // 두 번째 details 요소를 가져옵니다.
-            const details2 = document.getElementById('info-details2');
-            const contentDiv2 = document.getElementById('info-content2');
-        
-            // 페이지가 로드될 때 details의 열림 상태를 복원합니다.
-            window.addEventListener('load', () => {
-                const isOpen = sessionStorage.getItem('details2Open');
-                if (isOpen === 'true') {
-                    details2.open = true; // 상태가 'true'면 details를 엽니다.
-                }
-            });
-        
-            // details가 열릴 때 콘텐츠를 불러옵니다.
-            details2.addEventListener('toggle', async () => {
-                // 현재 열림 상태를 저장합니다.
-                sessionStorage.setItem('details2Open', details2.open);
-        
-                if (details2.open) {
-                    try {
-                        const response = await fetch("./templates/개설의도.html"); // 파일.html 경로
-                        if (response.ok) {
-                            const text = await response.text();
-        
-                            // 가져온 HTML에서 <footer> 태그를 제거
-                            const parser = new DOMParser();
-                            const doc = parser.parseFromString(text, 'text/html');
-                            const footer = doc.querySelector('footer');
-                            if (footer) {
-                                footer.remove(); // footer 요소 제거
-                            }
-        
-                            contentDiv2.innerHTML = doc.body.innerHTML; // 나머지 내용을 삽입
-                        } else {
-                            contentDiv2.innerHTML = '내용을 가져오는 중 오류가 발생했습니다.';
-                        }
-                    } catch (error) {
-                        contentDiv2.innerHTML = '내용을 가져오는 중 오류가 발생했습니다.';
-                    }
-                }
-            });
-        </script>
-
-<details id="info-details3">
-    <summary><hr></summary>
-    <div id="info-content3"></div>
-    <hr>
-</details>
-
-<script>
-    // 두 번째 details 요소를 가져옵니다.
-    const details3 = document.getElementById('info-details3');
-    const contentDiv3 = document.getElementById('info-content3'); // contentDiv3로 통일
-
-    // 페이지가 로드될 때 details의 열림 상태를 복원합니다.
-    window.addEventListener('load', () => {
-        const isOpen = sessionStorage.getItem('details3Open');
-        if (isOpen === 'true') {
-            details3.open = true; // 상태가 'true'면 details를 엽니다.
-        }
-    });
-
-    // details가 열릴 때 콘텐츠를 불러옵니다.
-    details3.addEventListener('toggle', async () => {
-        // 현재 열림 상태를 저장합니다.
-        sessionStorage.setItem('details3Open', details3.open);
-
-        if (details3.open) {
-            try {
-                const response = await fetch("./templates/효율적인 거짓말.html"); // 파일.html 경로
-                if (response.ok) {
-                    const text = await response.text();
-
-                    // 가져온 HTML에서 <footer> 태그를 제거
-                    const parser = new DOMParser();
-                    const doc = parser.parseFromString(text, 'text/html');
-                    const footer = doc.querySelector('footer');
-                    if (footer) {
-                        footer.remove(); // footer 요소 제거
-                    }
-
-                    contentDiv3.innerHTML = doc.body.innerHTML; // contentDiv3로 수정
-                } else {
-                    contentDiv3.innerHTML = '내용을 가져오는 중 오류가 발생했습니다.'; 
-                }
-            } catch (error) {
-                contentDiv3.innerHTML = '내용을 가져오는 중 오류가 발생했습니다.';
-            }
-        }
-    });
-</script>
-
-
-<!-- ㅇㅇ -->
-<details id="info-details6">
-    <summary><hr></summary>
-    <div id="info-content6"></div>
-    <hr>
-</details>
-
-<script>
-    // details6 요소를 가져옵니다.
-    const details6 = document.getElementById('info-details6');
-    const contentDiv6 = document.getElementById('info-content6'); // 변수명을 일관되게 사용
-
-    // 페이지가 로드될 때 details의 열림 상태를 복원합니다.
-    window.addEventListener('load', () => {
-        const isOpen = sessionStorage.getItem('details6Open');
-        if (isOpen === 'true') {
-            details6.open = true; // 상태가 'true'면 details를 엽니다.
-        }
-    });
-
-    // details가 열릴 때 콘텐츠를 불러옵니다.
-    details6.addEventListener('toggle', async () => {
-        // 현재 열림 상태를 저장합니다.
-        sessionStorage.setItem('details6Open', details6.open);
-
-        if (details6.open) {
-            try {
-                const response = await fetch("./templates/욕심의 끝.html"); // '욕심의 끝.html' 파일 경로로 변경
-                if (response.ok) {
-                    const text = await response.text();
-
-                    // 가져온 HTML에서 <footer> 태그를 제거
-                    const parser = new DOMParser();
-                    const doc = parser.parseFromString(text, 'text/html');
-                    const footer = doc.querySelector('footer');
-                    if (footer) {
-                        footer.remove(); // footer 요소 제거
-                    }
-
-                    contentDiv6.innerHTML = doc.body.innerHTML; // contentDiv6로 수정
-                } else {
-                    contentDiv6.innerHTML = '내용을 가져오는 중 오류가 발생했습니다.'; 
-                }
-            } catch (error) {
-                contentDiv6.innerHTML = '내용을 가져오는 중 오류가 발생했습니다.';
-            }
-        }
-    });
-</script>
-
-<details id="info-details7">
-    <summary><hr></summary>
-    <div id="info-content7"></div>
-    <hr>
-</details>
-
-<script>
-    // details6 요소를 가져옵니다.
-    const details7 = document.getElementById('info-details7');
-    const contentDiv7 = document.getElementById('info-content7'); // 변수명을 일관되게 사용
-
-    // 페이지가 로드될 때 details의 열림 상태를 복원합니다.
-    window.addEventListener('load', () => {
-        const isOpen = sessionStorage.getItem('details7Open');
-        if (isOpen === 'true') {
-            details7.open = true; // 상태가 'true'면 details를 엽니다.
-        }
-    });
-
-    // details가 열릴 때 콘텐츠를 불러옵니다.
-    details7.addEventListener('toggle', async () => {
-        // 현재 열림 상태를 저장합니다.
-        sessionStorage.setItem('details7Open', details7.open);
-
-        if (details7.open) {
-            try {
-                const response = await fetch("./templates/일상의공유.html"); // '욕심의 끝.html' 파일 경로로 변경
-                if (response.ok) {
-                    const text = await response.text();
-
-                    // 가져온 HTML에서 <footer> 태그를 제거
-                    const parser = new DOMParser();
-                    const doc = parser.parseFromString(text, 'text/html');
-                    const footer = doc.querySelector('footer');
-                    if (footer) {
-                        footer.remove(); // footer 요소 제거
-                    }
-
-                    contentDiv7.innerHTML = doc.body.innerHTML; // contentDiv6로 수정
-                } else {
-                    contentDiv7.innerHTML = '내용을 가져오는 중 오류가 발생했습니다.'; 
-                }
-            } catch (error) {
-                contentDiv7.innerHTML = '내용을 가져오는 중 오류가 발생했습니다.';
-            }
-        }
-    });
-</script>
-
-
-
-        
-       
     
+    <details id="info-details1">
+        <summary><hr></summary>
+        <div id="info-content1"></div>
+        <hr>
+    </details>
+
+    <script>
+        const details1 = document.getElementById('info-details1');
+        const contentDiv1 = document.getElementById('info-content1');
+
+        window.addEventListener('load', () => {
+            const isOpen = sessionStorage.getItem('details1Open');
+            if (isOpen === 'true') details1.open = true;
+        });
+
+        details1.addEventListener('toggle', async () => {
+            sessionStorage.setItem('details1Open', details1.open);
+            if (details1.open) {
+                const response = await fetch("./templates/인정.html");
+                const text = await response.text();
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(text, 'text/html');
+                const footer = doc.querySelector('footer');
+                if (footer) footer.remove();
+                contentDiv1.innerHTML = doc.body.innerHTML;
+            }
+        });
+    </script>
+
+    <details id="info-details2">
+        <summary><hr></summary>
+        <div id="info-content2"></div>
+        <hr>
+    </details>
+
+    <script>
+        const details2 = document.getElementById('info-details2');
+        const contentDiv2 = document.getElementById('info-content2');
+
+        window.addEventListener('load', () => {
+            const isOpen = sessionStorage.getItem('details2Open');
+            if (isOpen === 'true') details2.open = true;
+        });
+
+        details2.addEventListener('toggle', async () => {
+            sessionStorage.setItem('details2Open', details2.open);
+            if (details2.open) {
+                const response = await fetch("./templates/개설의도.html");
+                const text = await response.text();
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(text, 'text/html');
+                const footer = doc.querySelector('footer');
+                if (footer) footer.remove();
+                contentDiv2.innerHTML = doc.body.innerHTML;
+            }
+        });
+    </script>
+
+    <details id="info-details3">
+        <summary><hr></summary>
+        <div id="info-content3"></div>
+        <hr>
+    </details>
+
+    <script>
+        const details3 = document.getElementById('info-details3');
+        const contentDiv3 = document.getElementById('info-content3');
+
+        window.addEventListener('load', () => {
+            const isOpen = sessionStorage.getItem('details3Open');
+            if (isOpen === 'true') details3.open = true;
+        });
+
+        details3.addEventListener('toggle', async () => {
+            sessionStorage.setItem('details3Open', details3.open);
+            if (details3.open) {
+                const response = await fetch("./templates/효율적인 거짓말.html");
+                const text = await response.text();
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(text, 'text/html');
+                const footer = doc.querySelector('footer');
+                if (footer) footer.remove();
+                contentDiv3.innerHTML = doc.body.innerHTML;
+            }
+        });
+    </script>
+
+    <details id="info-details6">
+        <summary><hr></summary>
+        <div id="info-content6"></div>
+        <hr>
+    </details>
+
+    <script>
+        const details6 = document.getElementById('info-details6');
+        const contentDiv6 = document.getElementById('info-content6');
+
+        window.addEventListener('load', () => {
+            const isOpen = sessionStorage.getItem('details6Open');
+            if (isOpen === 'true') details6.open = true;
+        });
+
+        details6.addEventListener('toggle', async () => {
+            sessionStorage.setItem('details6Open', details6.open);
+            if (details6.open) {
+                const response = await fetch("./templates/욕심의 끝.html");
+                const text = await response.text();
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(text, 'text/html');
+                const footer = doc.querySelector('footer');
+                if (footer) footer.remove();
+                contentDiv6.innerHTML = doc.body.innerHTML;
+            }
+        });
+    </script>
+
+    <details id="info-details7">
+        <summary><hr></summary>
+        <div id="info-content7"></div>
+        <hr>
+    </details>
+
+    <script>
+        const details7 = document.getElementById('info-details7');
+        const contentDiv7 = document.getElementById('info-content7');
+
+        window.addEventListener('load', () => {
+            const isOpen = sessionStorage.getItem('details7Open');
+            if (isOpen === 'true') details7.open = true;
+        });
+
+        details7.addEventListener('toggle', async () => {
+            sessionStorage.setItem('details7Open', details7.open);
+            if (details7.open) {
+                const response = await fetch("./templates/일상의공유.html");
+                const text = await response.text();
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(text, 'text/html');
+                const footer = doc.querySelector('footer');
+                if (footer) footer.remove();
+                contentDiv7.innerHTML = doc.body.innerHTML;
+            }
+        });
+    </script>
 
 
 
-           
+
 </body>
 </html>

@@ -39,7 +39,7 @@
         
         </table>
     </footer>
-    <p style="text-align: left;" >0</p>
+    <p style="text-align: left;" >사</p>
     <hr>
 
     <details id="info-details1">
@@ -60,7 +60,7 @@
         details1.addEventListener('toggle', async () => {
             sessionStorage.setItem('details1Open', details1.open);
             if (details1.open) {
-                const response = await fetch("./templates2/38.html");
+                const response = await fetch("./templates/말.html");
                 const text = await response.text();
                 const parser = new DOMParser();
                 const doc = parser.parseFromString(text, 'text/html');
@@ -89,7 +89,7 @@
         details2.addEventListener('toggle', async () => {
             sessionStorage.setItem('details2Open', details2.open);
             if (details2.open) {
-                const response = await fetch("./templates2/34.html");
+                const response = await fetch("./templates/믿음.html");
                 const text = await response.text();
                 const parser = new DOMParser();
                 const doc = parser.parseFromString(text, 'text/html');
@@ -118,7 +118,7 @@
         details3.addEventListener('toggle', async () => {
             sessionStorage.setItem('details3Open', details3.open);
             if (details3.open) {
-                const response = await fetch("./templates2/1.html");
+                const response = await fetch("./templates/고양이.html");
                 const text = await response.text();
                 const parser = new DOMParser();
                 const doc = parser.parseFromString(text, 'text/html');
@@ -128,7 +128,39 @@
             }
         });
     </script>
+    
+    </script>
 
+    <details id="info-details4">
+        <summary><hr></summary>
+        <div id="info-content4"></div>
+        <hr>
+    </details>
+
+    <script>
+        const details4 = document.getElementById('info-details4');
+        const contentDiv4 = document.getElementById('info-content4');
+
+        window.addEventListener('load', () => {
+            const isOpen = sessionStorage.getItem('details4Open');
+            if (isOpen === 'true') details4.open = true;
+        });
+
+        details4.addEventListener('toggle', async () => {
+            sessionStorage.setItem('details4Open', details4.open);
+            if (details4.open) {
+                const response = await fetch("./templates/meaningless.html");
+                const text = await response.text();
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(text, 'text/html');
+                const footer = doc.querySelector('footer');
+                if (footer) footer.remove();
+                contentDiv4.innerHTML = doc.body.innerHTML;
+            }
+        });
+    </script>
+
+ 
 
 </body>
 </html>

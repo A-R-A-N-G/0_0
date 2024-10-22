@@ -28,10 +28,10 @@
         <table>
             <tbody>
                 <tr>
-                    <td><a href="./landing.html">1</a></td>
-                    <td><a href="./index.html">2</a></td>
-                    <td><a href="./index2.html">3</a></td>
-                    <td><a href="./index3.html">4</a></td>
+                    <td><a href="./landing.html">ㄱ</a></td>
+                    <td><a href="./index.html">ㄴ</a></td>
+                    <td><a href="./index2.html">ㄷ</a></td>
+                    <td><a href="./index3.html"></a></td>
                 </tr>
         
         
@@ -39,126 +39,28 @@
         
         </table>
     </footer>
-    <p style="text-align: left;" >사</p>
+    <p style="text-align: left;" >&nbsp;</p>
     <hr>
 
-    <details id="info-details1">
-        <summary><hr></summary>
-        <div id="info-content1"></div>
-        <hr>
-    </details>
-
-    <script>
-        const details1 = document.getElementById('info-details1');
-        const contentDiv1 = document.getElementById('info-content1');
-
-        window.addEventListener('load', () => {
-            const isOpen = sessionStorage.getItem('details1Open');
-            if (isOpen === 'true') details1.open = true;
-        });
-
-        details1.addEventListener('toggle', async () => {
-            sessionStorage.setItem('details1Open', details1.open);
-            if (details1.open) {
-                const response = await fetch("./templates/말.html");
-                const text = await response.text();
-                const parser = new DOMParser();
-                const doc = parser.parseFromString(text, 'text/html');
-                const footer = doc.querySelector('footer');
-                if (footer) footer.remove();
-                contentDiv1.innerHTML = doc.body.innerHTML;
-            }
-        });
-    </script>
-
-    <details id="info-details2">
-        <summary><hr></summary>
-        <div id="info-content2"></div>
-        <hr>
-    </details>
-
-    <script>
-        const details2 = document.getElementById('info-details2');
-        const contentDiv2 = document.getElementById('info-content2');
-
-        window.addEventListener('load', () => {
-            const isOpen = sessionStorage.getItem('details2Open');
-            if (isOpen === 'true') details2.open = true;
-        });
-
-        details2.addEventListener('toggle', async () => {
-            sessionStorage.setItem('details2Open', details2.open);
-            if (details2.open) {
-                const response = await fetch("./templates/믿음.html");
-                const text = await response.text();
-                const parser = new DOMParser();
-                const doc = parser.parseFromString(text, 'text/html');
-                const footer = doc.querySelector('footer');
-                if (footer) footer.remove();
-                contentDiv2.innerHTML = doc.body.innerHTML;
-            }
-        });
-    </script>
-
-    <details id="info-details3">
-        <summary><hr></summary>
-        <div id="info-content3"></div>
-        <hr>
-    </details>
-
-    <script>
-        const details3 = document.getElementById('info-details3');
-        const contentDiv3 = document.getElementById('info-content3');
-
-        window.addEventListener('load', () => {
-            const isOpen = sessionStorage.getItem('details3Open');
-            if (isOpen === 'true') details3.open = true;
-        });
-
-        details3.addEventListener('toggle', async () => {
-            sessionStorage.setItem('details3Open', details3.open);
-            if (details3.open) {
-                const response = await fetch("./templates/고양이.html");
-                const text = await response.text();
-                const parser = new DOMParser();
-                const doc = parser.parseFromString(text, 'text/html');
-                const footer = doc.querySelector('footer');
-                if (footer) footer.remove();
-                contentDiv3.innerHTML = doc.body.innerHTML;
-            }
-        });
-    </script>
+    <table>
+        <tbody>
+            <tr>
+                <td><a href="./templates/고양이.html"><img src="./images/고양이/까칠이.png" alt="" style="width: 150px; height: 150px;"></a></td>
+                <td><a href="./templates/부산.html"><img src="./images/부산/파도.jpg" alt="" style="width: 150px; height: 150px;" ></a></td>
+                <td></td>
+            </tr>
+        
     
-    </script>
+        </tbody>
+    
+    </table>
+    <p style="text-align: center;">
+        <a href="./templates3/album.html" style="width: 300px; height: 300px;" >
+            <img src="images/badbad2.jpg" >
+        </a>
+        </p>
 
-    <details id="info-details4">
-        <summary><hr></summary>
-        <div id="info-content4"></div>
-        <hr>
-    </details>
-
-    <script>
-        const details4 = document.getElementById('info-details4');
-        const contentDiv4 = document.getElementById('info-content4');
-
-        window.addEventListener('load', () => {
-            const isOpen = sessionStorage.getItem('details4Open');
-            if (isOpen === 'true') details4.open = true;
-        });
-
-        details4.addEventListener('toggle', async () => {
-            sessionStorage.setItem('details4Open', details4.open);
-            if (details4.open) {
-                const response = await fetch("./templates/meaningless.html");
-                const text = await response.text();
-                const parser = new DOMParser();
-                const doc = parser.parseFromString(text, 'text/html');
-                const footer = doc.querySelector('footer');
-                if (footer) footer.remove();
-                contentDiv4.innerHTML = doc.body.innerHTML;
-            }
-        });
-    </script>
+    
 
  
 

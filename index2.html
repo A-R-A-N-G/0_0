@@ -28,10 +28,10 @@
         <table>
             <tbody>
                 <tr>
-                    <td><a href="./landing.html">1</a></td>
-                    <td><a href="./index.html">2</a></td>
-                    <td><a href="./index2.html">3</a></td>
-                    <td><a href="./index3.html">4</a></td>
+                    <td><a href="./landing.html">ㄱ</a></td>
+                    <td><a href="./index.html">ㄴ</a></td>
+                    <td><a href="./index2.html"></a></td>
+                    <td><a href="./index3.html">ㄹ</a></td>
                 </tr>
         
         
@@ -39,69 +39,60 @@
         
         </table>
     </footer>
-    <p style="text-align: left;" >0</p>
+    <p style="text-align: left;" >&nbsp;</p>
     <hr>
 
     <details id="info-details1">
-        <summary><hr></summary>
+        <summary>&nbsp;30~40<hr></summary>
         <div id="info-content1"></div>
         <hr>
     </details>
-
+    
     <script>
         const details1 = document.getElementById('info-details1');
         const contentDiv1 = document.getElementById('info-content1');
-
+    
         window.addEventListener('load', () => {
             const isOpen = sessionStorage.getItem('details1Open');
             if (isOpen === 'true') details1.open = true;
         });
-
+    
         details1.addEventListener('toggle', async () => {
             sessionStorage.setItem('details1Open', details1.open);
             if (details1.open) {
-                const response = await fetch("./templates2/38.html");
-                const text = await response.text();
-                const parser = new DOMParser();
-                const doc = parser.parseFromString(text, 'text/html');
-                const footer = doc.querySelector('footer');
-                if (footer) footer.remove();
-                contentDiv1.innerHTML = doc.body.innerHTML;
+                try {
+                    const [response38, response34] = await Promise.all([
+                        fetch("./templates2/38.html"),
+                        fetch("./templates2/34.html")
+                    ]);
+    
+                    const text38 = await response38.text();
+                    const text34 = await response34.text();
+    
+                    const parser = new DOMParser();
+    
+                    const doc38 = parser.parseFromString(text38, 'text/html');
+                    const doc34 = parser.parseFromString(text34, 'text/html');
+    
+                    // 필요에 따라 footer를 제거
+                    const footer38 = doc38.querySelector('footer');
+                    const footer34 = doc34.querySelector('footer');
+                    if (footer38) footer38.remove();
+                    if (footer34) footer34.remove();
+    
+                    // 두 HTML 파일의 내용을 결합하여 contentDiv에 표시
+                    contentDiv1.innerHTML = doc38.body.innerHTML + '<hr>' + doc34.body.innerHTML;
+    
+                } catch (error) {
+                    console.error('Error fetching the files:', error);
+                }
             }
         });
     </script>
-
-    <details id="info-details2">
-        <summary><hr></summary>
-        <div id="info-content2"></div>
-        <hr>
-    </details>
-
-    <script>
-        const details2 = document.getElementById('info-details2');
-        const contentDiv2 = document.getElementById('info-content2');
-
-        window.addEventListener('load', () => {
-            const isOpen = sessionStorage.getItem('details2Open');
-            if (isOpen === 'true') details2.open = true;
-        });
-
-        details2.addEventListener('toggle', async () => {
-            sessionStorage.setItem('details2Open', details2.open);
-            if (details2.open) {
-                const response = await fetch("./templates2/34.html");
-                const text = await response.text();
-                const parser = new DOMParser();
-                const doc = parser.parseFromString(text, 'text/html');
-                const footer = doc.querySelector('footer');
-                if (footer) footer.remove();
-                contentDiv2.innerHTML = doc.body.innerHTML;
-            }
-        });
-    </script>
+    
 
     <details id="info-details3">
-        <summary><hr></summary>
+        <summary>&nbsp;1~10<hr></summary>
         <div id="info-content3"></div>
         <hr>
     </details>

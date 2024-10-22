@@ -166,7 +166,7 @@ pre {
 /* 고정 푸터 스타일 */
 footer {
     position: fixed;
-    bottom: 0;
+    top: 0;
     width: 100%;
     background-color: ta;
     color: rgb(255, 255, 255);
@@ -281,6 +281,5 @@ p {
     width: 100%;
     height: auto;
 } */
-
 
 

@@ -23,10 +23,10 @@
         <table>
             <tbody>
                 <tr>
-                    <td><a href="./landing.html">1</a></td>
-                    <td><a href="./index.html">2</a></td>
-                    <td><a href="./index2.html">3</a></td>
-                    <td><a href="./index3.html">4</a></td>
+                    <td><a href="./landing.html">ㄱ</a></td>
+                    <td><a href="./index.html" ></a></td>
+                    <td><a href="./index2.html">ㄷ</a></td>
+                    <td><a href="./index3.html">ㄹ</a></td>
                 </tr>
         
         
@@ -34,27 +34,17 @@
         
         </table>
     </footer>
-    <p style="text-align: left;" >갑자기 쓰고 싶은 글</p>
-    <hr>
+    <p style="text-align: left;" >&nbsp;</p>
+    <hr><div id="info-content1"></div>
+    <div id="info-content2"></div>
+    <div id="info-content3"></div>
+    <div id="info-content6"></div>
     
-    <details id="info-details1">
-        <summary><hr></summary>
-        <div id="info-content1"></div>
-        <hr>
-    </details>
-
     <script>
-        const details1 = document.getElementById('info-details1');
+        // 1. "인정.html" 내용을 로드
         const contentDiv1 = document.getElementById('info-content1');
-
-        window.addEventListener('load', () => {
-            const isOpen = sessionStorage.getItem('details1Open');
-            if (isOpen === 'true') details1.open = true;
-        });
-
-        details1.addEventListener('toggle', async () => {
-            sessionStorage.setItem('details1Open', details1.open);
-            if (details1.open) {
+        window.addEventListener('load', async () => {
+            try {
                 const response = await fetch("./templates/인정.html");
                 const text = await response.text();
                 const parser = new DOMParser();
@@ -62,28 +52,15 @@
                 const footer = doc.querySelector('footer');
                 if (footer) footer.remove();
                 contentDiv1.innerHTML = doc.body.innerHTML;
+            } catch (error) {
+                console.error('Error fetching 인정.html:', error);
             }
         });
-    </script>
-
-    <details id="info-details2">
-        <summary><hr></summary>
-        <div id="info-content2"></div>
-        <hr>
-    </details>
-
-    <script>
-        const details2 = document.getElementById('info-details2');
+    
+        // 2. "개설의도.html" 내용을 로드
         const contentDiv2 = document.getElementById('info-content2');
-
-        window.addEventListener('load', () => {
-            const isOpen = sessionStorage.getItem('details2Open');
-            if (isOpen === 'true') details2.open = true;
-        });
-
-        details2.addEventListener('toggle', async () => {
-            sessionStorage.setItem('details2Open', details2.open);
-            if (details2.open) {
+        window.addEventListener('load', async () => {
+            try {
                 const response = await fetch("./templates/개설의도.html");
                 const text = await response.text();
                 const parser = new DOMParser();
@@ -91,28 +68,15 @@
                 const footer = doc.querySelector('footer');
                 if (footer) footer.remove();
                 contentDiv2.innerHTML = doc.body.innerHTML;
+            } catch (error) {
+                console.error('Error fetching 개설의도.html:', error);
             }
         });
-    </script>
-
-    <details id="info-details3">
-        <summary><hr></summary>
-        <div id="info-content3"></div>
-        <hr>
-    </details>
-
-    <script>
-        const details3 = document.getElementById('info-details3');
+    
+        // 3. "효율적인 거짓말.html" 내용을 로드
         const contentDiv3 = document.getElementById('info-content3');
-
-        window.addEventListener('load', () => {
-            const isOpen = sessionStorage.getItem('details3Open');
-            if (isOpen === 'true') details3.open = true;
-        });
-
-        details3.addEventListener('toggle', async () => {
-            sessionStorage.setItem('details3Open', details3.open);
-            if (details3.open) {
+        window.addEventListener('load', async () => {
+            try {
                 const response = await fetch("./templates/효율적인 거짓말.html");
                 const text = await response.text();
                 const parser = new DOMParser();
@@ -120,28 +84,15 @@
                 const footer = doc.querySelector('footer');
                 if (footer) footer.remove();
                 contentDiv3.innerHTML = doc.body.innerHTML;
+            } catch (error) {
+                console.error('Error fetching 효율적인 거짓말.html:', error);
             }
         });
-    </script>
-
-    <details id="info-details6">
-        <summary><hr></summary>
-        <div id="info-content6"></div>
-        <hr>
-    </details>
-
-    <script>
-        const details6 = document.getElementById('info-details6');
+    
+        // 4. "욕심의 끝.html" 내용을 로드
         const contentDiv6 = document.getElementById('info-content6');
-
-        window.addEventListener('load', () => {
-            const isOpen = sessionStorage.getItem('details6Open');
-            if (isOpen === 'true') details6.open = true;
-        });
-
-        details6.addEventListener('toggle', async () => {
-            sessionStorage.setItem('details6Open', details6.open);
-            if (details6.open) {
+        window.addEventListener('load', async () => {
+            try {
                 const response = await fetch("./templates/욕심의 끝.html");
                 const text = await response.text();
                 const parser = new DOMParser();
@@ -149,40 +100,142 @@
                 const footer = doc.querySelector('footer');
                 if (footer) footer.remove();
                 contentDiv6.innerHTML = doc.body.innerHTML;
+            } catch (error) {
+                console.error('Error fetching 욕심의 끝.html:', error);
             }
         });
     </script>
 
-    <details id="info-details7">
-        <summary><hr></summary>
-        <div id="info-content7"></div>
-        <hr>
-    </details>
+<div id="info-content7"></div>
 
-    <script>
-        const details7 = document.getElementById('info-details7');
-        const contentDiv7 = document.getElementById('info-content7');
+<script>
+    const contentDiv7 = document.getElementById('info-content7');
 
-        window.addEventListener('load', () => {
-            const isOpen = sessionStorage.getItem('details7Open');
-            if (isOpen === 'true') details7.open = true;
-        });
+    window.addEventListener('load', async () => {
+        try {
+            const response = await fetch("./templates/일상의공유.html");
 
-        details7.addEventListener('toggle', async () => {
-            sessionStorage.setItem('details7Open', details7.open);
-            if (details7.open) {
-                const response = await fetch("./templates/일상의공유.html");
-                const text = await response.text();
-                const parser = new DOMParser();
-                const doc = parser.parseFromString(text, 'text/html');
-                const footer = doc.querySelector('footer');
-                if (footer) footer.remove();
-                contentDiv7.innerHTML = doc.body.innerHTML;
+            // 서버에서 200 OK 응답이 왔는지 확인
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
             }
-        });
-    </script>
+
+            const text = await response.text();
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(text, 'text/html');
+
+            // footer 태그 제거
+            const footer = doc.querySelector('footer');
+            if (footer) footer.remove();
+
+            // 본문 내용을 표시
+            contentDiv7.innerHTML = doc.body.innerHTML;
+
+        } catch (error) {
+            console.error('Error fetching the file:', error);
+        }
+    });
 
 
+</script>
+
+<div id="info-content8"></div>
+
+<script>
+    const contentDiv8 = document.getElementById('info-content8');
+
+    window.addEventListener('load', async () => {
+        try {
+            const response = await fetch("./templates/믿음.html");
+
+            // 서버에서 200 OK 응답이 왔는지 확인
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            const text = await response.text();
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(text, 'text/html');
+
+            // footer 태그 제거
+            const footer = doc.querySelector('footer');
+            if (footer) footer.remove();
+
+            // 본문 내용을 표시
+            contentDiv8.innerHTML = doc.body.innerHTML;
+
+        } catch (error) {
+            console.error('Error fetching the file:', error);
+        }
+    });
+
+
+</script>
+
+<div id="info-content9"></div>
+
+<script>
+    const contentDiv9 = document.getElementById('info-content9');
+
+    window.addEventListener('load', async () => {
+        try {
+            const response = await fetch("./templates/meaningless.html");
+
+            // 서버에서 200 OK 응답이 왔는지 확인
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            const text = await response.text();
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(text, 'text/html');
+
+            // footer 태그 제거
+            const footer = doc.querySelector('footer');
+            if (footer) footer.remove();
+
+            // 본문 내용을 표시
+            contentDiv9.innerHTML = doc.body.innerHTML;
+
+        } catch (error) {
+            console.error('Error fetching the file:', error);
+        }
+    });
+
+
+</script>
+
+<div id="info-content10"></div>
+<script>
+    const contentDiv10 = document.getElementById('info-content10');
+
+    window.addEventListener('load', async () => {
+        try {
+            const response = await fetch("./templates/말.html");
+
+            // 서버에서 200 OK 응답이 왔는지 확인
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            const text = await response.text();
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(text, 'text/html');
+
+            // footer 태그 제거
+            const footer = doc.querySelector('footer');
+            if (footer) footer.remove();
+
+            // 본문 내용을 표시
+            contentDiv10.innerHTML = doc.body.innerHTML;
+
+        } catch (error) {
+            console.error('Error fetching the file:', error);
+        }
+    });
+
+
+</script>
 
 
 </body>

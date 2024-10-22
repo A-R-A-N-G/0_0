@@ -47,32 +47,24 @@
                 <td class="img-wrapper"><a href="./templates/부산.html"><img src="./images/부산/파도.jpg" alt=""></a></td>
                 <td class="img-wrapper"><img src="./images/X.png" alt=""></td>
             </tr>
+            <tr>
+                <td><a href="./templates3/badbadnotgood.html"><img src="./images/badbad2.jpg"></a></td>
+                <td><a href="./templates3/풍등.html"><img src="./images/풍등2.jpg"></a></td>
+                <td><a href="./templates3/김뜻돌.html"><img src="./images/90.jpg"></a></td>
+            </tr>
+            <tr>
+                <td><a href="./templates3/carner.html"><img src="./images/not waving,but drowning.jpg" ></a></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <!-- <td>&nbsp;</td> -->
+                <!-- <td>&nbsp;</td>
+                <td>&nbsp;</td> -->
+            </tr>
         </tbody>
+        
     </table>
 
-    <div id="content-1"></div>
-    <script>
-        // Function to load HTML content from a given URL into a specified div
-        async function loadContent(url, contentDiv) {
-            try {
-                const response = await fetch(url);
-                const text = await response.text();
-                const parser = new DOMParser();
-                const doc = parser.parseFromString(text, 'text/html');
-                const footer = doc.querySelector('footer');
-                if (footer) footer.remove(); // Remove footer if it exists
-                contentDiv.innerHTML = doc.body.innerHTML; // Insert the content
-            } catch (error) {
-                console.error('Error fetching:', error);
-            }
-        }
-    
-        // Load content for each HTML file
-        window.addEventListener('load', () => {
-            loadContent('./templates3/album.html', document.getElementById('content-1'));
-        });
-    </script>
-    
+
 
  
 

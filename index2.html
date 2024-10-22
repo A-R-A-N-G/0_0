@@ -21,104 +21,56 @@
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5892XK94"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <footer>
+    <header>
 
 
         
         <table>
             <tbody>
                 <tr>
-                    <td><a href="./landing.html">ㄱ</a></td>
-                    <td><a href="./index.html">ㄴ</a></td>
-                    <td><a href="./index2.html"></a></td>
-                    <td><a href="./index3.html">ㄹ</a></td>
+                    <td><a href="./landing.html" class="transparent-link">0_0</a></td>
+                    <td><a href="./index.html" class="transparent-link">:(</a></td>
+                    <td><a href="./index2.html" >:)</a></td>
+                    <td><a href="./index3.html" class="transparent-link">00</a></td>
                 </tr>
         
         
             </tbody>
         
         </table>
-    </footer>
+    </header>
     <p style="text-align: left;" >&nbsp;</p>
     <hr>
 
-    <details id="info-details1">
-        <summary>&nbsp;30~40<hr></summary>
-        <div id="info-content1"></div>
-        <hr>
-    </details>
+    <div id="content-38"></div>
+    <div id="content-34"></div>
+    <div id="content-1"></div>
     
     <script>
-        const details1 = document.getElementById('info-details1');
-        const contentDiv1 = document.getElementById('info-content1');
-    
-        window.addEventListener('load', () => {
-            const isOpen = sessionStorage.getItem('details1Open');
-            if (isOpen === 'true') details1.open = true;
-        });
-    
-        details1.addEventListener('toggle', async () => {
-            sessionStorage.setItem('details1Open', details1.open);
-            if (details1.open) {
-                try {
-                    const [response38, response34] = await Promise.all([
-                        fetch("./templates2/38.html"),
-                        fetch("./templates2/34.html")
-                    ]);
-    
-                    const text38 = await response38.text();
-                    const text34 = await response34.text();
-    
-                    const parser = new DOMParser();
-    
-                    const doc38 = parser.parseFromString(text38, 'text/html');
-                    const doc34 = parser.parseFromString(text34, 'text/html');
-    
-                    // 필요에 따라 footer를 제거
-                    const footer38 = doc38.querySelector('footer');
-                    const footer34 = doc34.querySelector('footer');
-                    if (footer38) footer38.remove();
-                    if (footer34) footer34.remove();
-    
-                    // 두 HTML 파일의 내용을 결합하여 contentDiv에 표시
-                    contentDiv1.innerHTML = doc38.body.innerHTML + '<hr>' + doc34.body.innerHTML;
-    
-                } catch (error) {
-                    console.error('Error fetching the files:', error);
-                }
-            }
-        });
-    </script>
-    
-
-    <details id="info-details3">
-        <summary>&nbsp;1~10<hr></summary>
-        <div id="info-content3"></div>
-        <hr>
-    </details>
-
-    <script>
-        const details3 = document.getElementById('info-details3');
-        const contentDiv3 = document.getElementById('info-content3');
-
-        window.addEventListener('load', () => {
-            const isOpen = sessionStorage.getItem('details3Open');
-            if (isOpen === 'true') details3.open = true;
-        });
-
-        details3.addEventListener('toggle', async () => {
-            sessionStorage.setItem('details3Open', details3.open);
-            if (details3.open) {
-                const response = await fetch("./templates2/1.html");
+        // Function to load HTML content from a given URL into a specified div
+        async function loadContent(url, contentDiv) {
+            try {
+                const response = await fetch(url);
                 const text = await response.text();
                 const parser = new DOMParser();
                 const doc = parser.parseFromString(text, 'text/html');
                 const footer = doc.querySelector('footer');
-                if (footer) footer.remove();
-                contentDiv3.innerHTML = doc.body.innerHTML;
+                if (footer) footer.remove(); // Remove footer if it exists
+                contentDiv.innerHTML = doc.body.innerHTML; // Insert the content
+            } catch (error) {
+                console.error('Error fetching:', error);
             }
+        }
+    
+        // Load content for each HTML file
+        window.addEventListener('load', () => {
+            loadContent('./templates2/38.html', document.getElementById('content-38'));
+            loadContent('./templates2/34.html', document.getElementById('content-34'));
+            loadContent('./templates2/1.html', document.getElementById('content-1'));
         });
     </script>
+    
+
 
 
 </body>

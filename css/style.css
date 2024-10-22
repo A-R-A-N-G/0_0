@@ -164,11 +164,35 @@ pre {
 /* 푸터 */
 
 /* 고정 푸터 스타일 */
-footer {
+header {
     position: fixed;
     top: 0;
     width: 100%;
     background-color: ta;
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    /* padding: 10px 20px; */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* 그림자 방향 위로 */
+    z-index: 1000;
+    font-family: 'joseon';
+
+    max-width: 650px;
+    line-height: 2;
+    border-top: 1.5px solid rgba(0, 0, 255, 0.5); /* 파란색, 50% 투명도 */
+    height: 50px;
+    text-decoration: none;
+
+}
+
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    /* background-color: ta; */
     color: rgb(255, 255, 255);
     display: flex;
     justify-content: right;
@@ -283,3 +307,25 @@ p {
 } */
 
 
+.transparent-link {
+    opacity: 0.3; /* 원하는 불투명도 설정 */
+    text-decoration: none; /* 밑줄 제거 (원하는 경우) */
+}
+
+
+#content-container {
+    margin-bottom: 20px;
+}
+
+#load-more-button {
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#load-more-button:hover {
+    background-color: #0056b3;
+}

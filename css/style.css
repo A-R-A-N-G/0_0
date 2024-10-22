@@ -326,6 +326,19 @@ p {
     cursor: pointer;
 }
 
-#load-more-button:hover {
-    background-color: #0056b3;
-}
+
+.img-wrapper {
+    width: 100px; /* 원하는 크기 */
+    padding-top: 100px; /* 정사각형 비율 유지 */
+    position: relative;
+  }
+  
+  .img-wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 정사각형에 맞게 이미지가 잘리더라도 꽉 차게 */
+  }
+  

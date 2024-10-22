@@ -21,7 +21,7 @@
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5892XK94"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <header>
+
 
 
         
@@ -38,26 +38,40 @@
             </tbody>
         
         </table>
-    </header>
-
-    <p style="text-align: left;" >&nbsp;</p>
     <hr>
 
     <table>
         <tbody>
             <tr>
-                <td><a href="./templates/고양이.html"><img src="./images/고양이/까칠이.png" alt="" style="width: 150px; height: 150px;"></a></td>
-                <td><a href="./templates/부산.html"><img src="./images/부산/파도.jpg" alt="" style="width: 150px; height: 150px;" ></a></td>
-                <td><a href="./templates3/album.html"><img src="./images/가장보통의존재.webp" alt="" style="width: 150px; height: 150px;"></a></td>
+                <td class="img-wrapper"><a href="./templates/고양이.html"><img src="./images/고양이/까칠이.png" alt=""></a></td>
+                <td class="img-wrapper"><a href="./templates/부산.html"><img src="./images/부산/파도.jpg" alt=""></a></td>
+                <td class="img-wrapper"><img src="./images/X.png" alt=""></td>
             </tr>
-        
-    
         </tbody>
-    
     </table>
-        </a>
-        </p>
 
+    <div id="content-1"></div>
+    <script>
+        // Function to load HTML content from a given URL into a specified div
+        async function loadContent(url, contentDiv) {
+            try {
+                const response = await fetch(url);
+                const text = await response.text();
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(text, 'text/html');
+                const footer = doc.querySelector('footer');
+                if (footer) footer.remove(); // Remove footer if it exists
+                contentDiv.innerHTML = doc.body.innerHTML; // Insert the content
+            } catch (error) {
+                console.error('Error fetching:', error);
+            }
+        }
+    
+        // Load content for each HTML file
+        window.addEventListener('load', () => {
+            loadContent('./templates3/album.html', document.getElementById('content-1'));
+        });
+    </script>
     
 
  

@@ -39,7 +39,7 @@
 
         
 
-    <table>
+    <!-- <table>
         <tbody>
             <tr>
                 <td class="img-wrapper"><a href="./templates/고양이.html"><img src="./images/고양이/까칠이.png" alt=""></a></td>
@@ -55,17 +55,91 @@
 
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
-                <!-- <td>&nbsp;</td> -->
-                <!-- <td>&nbsp;</td>
-                <td>&nbsp;</td> -->
+            </tr>
+        </tbody>
+        
+    </table> -->
+
+    <table>
+        <tbody>
+            <tr>
+                <td class="img-wrapper"><img src="./images/고양이/까칠이.png" alt=""></td>
+                <!-- <td class="img-wrapper"><img src="./images/부산/파도.jpg" alt=""></td> -->
+                <td class="img-wrapper"><img src="./images/not waving,but drowning.jpg"></td>
+                </tr>
+                <tr>
+                <td><img src="./images/badbad2.jpg"></td>
+                <td><img src="./images/풍등2.jpg"></td>
+                <td><img src="./images/90.jpg"></td>
+                
+            </tr>
+            <tr>
+
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
             </tr>
         </tbody>
         
     </table>
 
+    
 
 
-
+    <ul>
+        <li class="img-wrapper">
+            <div id="content1"></div>
+        </li>
+        <li class="img-wrapper">
+            <div id="content2"></div>
+        </li>
+        <li class="img-wrapper">
+            <div id="content3"></div>
+        </li>
+        <li class="img-wrapper">
+            <div id="content4"></div>
+        </li>
+        <li class="img-wrapper">
+            <div id="content5"></div>
+        </li>
+        <li class="img-wrapper">
+            <div id="content6"></div>
+        </li>
+    </ul>
+    
+    <div id="content-고양이"></div>
+    <!-- <div id="content-부산"></div> -->
+    <div id="content-carner"></div>
+    <div id="content-badbadnotgood"></div>
+    <div id="content-풍등"></div>
+    <div id="content-김뜻돌"></div>
+    
+    <script>
+        // Function to load HTML content from a given URL into a specified div
+        async function loadContent(url, contentDiv) {
+            try {
+                const response = await fetch(url);
+                const text = await response.text();
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(text, 'text/html');
+                const footer = doc.querySelector('footer');
+                if (footer) footer.remove(); // Remove footer if it exists
+                contentDiv.innerHTML = doc.body.innerHTML; // Insert the content
+            } catch (error) {
+                console.error('Error fetching:', error);
+            }
+        }
+    
+        // Load content for each HTML file
+        window.addEventListener('load', () => {
+            loadContent('./templates/고양이.html', document.getElementById('content-고양이'));
+            loadContent('./templates/부산.html', document.getElementById('content-부산'));
+            loadContent('./templates3/carner.html', document.getElementById('content-carner'));
+            loadContent('./templates3/badbadnotgood.html', document.getElementById('content-badbadnotgood'));
+            loadContent('./templates3/풍등.html', document.getElementById('content-풍등'));
+            loadContent('./templates3/김뜻돌.html', document.getElementById('content-김뜻돌'));
+        });
+    </script>
+    
  
 
 </body>

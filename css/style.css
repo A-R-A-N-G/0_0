@@ -204,9 +204,10 @@ footer {
 
     max-width: 650px;
     line-height: 2;
-    border-top: 1.5px solid rgba(0, 0, 255, 0.5); /* 파란색, 50% 투명도 */
-    height: 50px;
+    border-top: px solid rgba(0, 0, 255, 0.5); /* 파란색, 50% 투명도 */
+    height: 20px;
     text-decoration: none;
+    background-color: #000000;
 
 }
 

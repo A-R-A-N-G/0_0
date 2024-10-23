@@ -195,7 +195,7 @@ footer {
     /* background-color: ta; */
     color: rgb(255, 255, 255);
     display: flex;
-    justify-content: right;
+    justify-content: center;
     align-items: center;
     /* padding: 10px 20px; */
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* 그림자 방향 위로 */
@@ -213,7 +213,7 @@ footer {
 footer .logo {
     color: white;
     display: flex; /* logo를 flex 컨테이너로 설정 */
-    justify-content: flex-end; /* 우측 정렬 */
+    justify-content: center; /* 우측 정렬 */
     font-family: 'joseon';
     margin-right: 15px;
     text-decoration: none;
@@ -224,7 +224,7 @@ footer .logo a {
     font-size: 1.2em;
     text-decoration: none;
     margin-left: 10px;
-    justify-content: flex-end;
+    justify-content: center;
     font-family: 'joseon';
     margin-right: 10px;
 }

@@ -20,6 +20,7 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
+    <div id="content-총총총"></div> <!-- 총총총.html이 로드될 div -->
     <div id="info-content1"></div>
     <div id="info-content2"></div>
     <div id="info-content3"></div>
@@ -89,7 +90,24 @@
                 console.error('Error fetching 욕심의 끝.html:', error);
             }
         });
+    
+        // 5. "총총총.html" 내용을 로드
+        const contentDiv총총총 = document.getElementById('content-총총총');
+        window.addEventListener('load', async () => {
+            try {
+                const response = await fetch("./templates/총총총.html");
+                const text = await response.text();
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(text, 'text/html');
+                const footer = doc.querySelector('footer');
+                if (footer) footer.remove();
+                contentDiv총총총.innerHTML = doc.body.innerHTML;
+            } catch (error) {
+                console.error('Error fetching 총총총.html:', error);
+            }
+        });
     </script>
+    
 
 <div id="info-content7"></div>
 

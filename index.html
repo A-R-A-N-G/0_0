@@ -19,7 +19,7 @@
         <table>
             <tr>
                 <td><a href="./index.html">0</a> </td>
-                <td><a href="./index2.html">~38</a></td>
+                <td><a href="./index2.html">~40</a></td>
                 <td><a href="./index3.html">*</a></td>
                 <!-- <td></td> -->
             </tr>
@@ -32,7 +32,7 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-        행복,총총총, 인정, <주어진것들 그대로 받아들이지 않기>, 효율적인 거짓말, 욕심의 끝, 일상의 공유, 믿음, meaningless, 말 
+        신년,행복,총총총, 인정, <주어진것들 그대로 받아들이지 않기>, 효율적인 거짓말, 욕심의 끝, 일상의 공유, 믿음, meaningless, 말 
 
         <ul>
             <li class="img-wrapper">
@@ -54,6 +54,7 @@
                 <div id="content6"></div>
             </li>
         </ul>
+        <div id="신년"></div>
 
 
         행복
@@ -145,6 +146,21 @@
                 console.error('Error fetching 총총총.html:', error);
             }
         });
+            // 6. "신년.html" 내용을 로드
+            const contentDiv신년 = document.getElementById('신년');
+    window.addEventListener('load', async () => {
+        try {
+            const response = await fetch("./templates/신년.html");
+            const text = await response.text();
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(text, 'text/html');
+            const footer = doc.querySelector('footer');
+            if (footer) footer.remove();
+            contentDiv신년.innerHTML = doc.body.innerHTML;
+        } catch (error) {
+            console.error('Error fetching 신년.html:', error);
+        }
+    });
     </script>
     
 

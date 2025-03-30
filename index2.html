@@ -26,7 +26,7 @@
         <table>
             <tr>
                 <td><a href="./index.html">0</a> </td>
-                <td><a href="./index2.html">~38</a></td>
+                <td><a href="./index2.html">~40</a></td>
                 <td><a href="./index3.html">*</a></td>
                 <!-- <td></td> -->
             </tr>
@@ -34,7 +34,7 @@
         </table>
     </footer>
 
-    38, 34~36, 1~2
+    40, 38, 34~36, 1~2
 
     <ul>
         <li class="img-wrapper">
@@ -59,6 +59,7 @@
 
         
 <hr>
+    <div id="content-40"></div>
     <div id="content-38"></div>
     <div id="content-34"></div>
     <div id="content-1"></div>
@@ -81,6 +82,7 @@
     
         // Load content for each HTML file
         window.addEventListener('load', () => {
+            loadContent('./templates2/40.html', document.getElementById('content-40'));
             loadContent('./templates2/38.html', document.getElementById('content-38'));
             loadContent('./templates2/34.html', document.getElementById('content-34'));
             loadContent('./templates2/1.html', document.getElementById('content-1'));
